@@ -51,3 +51,11 @@ python terrain_capacity.py outputs/lafan-1024/train-runtime.json \
 `run_dry.py` screens batches above four environments before launching Isaac and rejects a curriculum whose particle-state bound already exceeds free GPU memory. A passing screen is **not** evidence of sufficient total memory or throughput. Workers still use separate worlds stepped sequentially over IPC, and large-batch performance remains unvalidated. The old hardcoded 64-env scene check now uses the actual map capacity.
 
 Possible next routes are a smaller validated live-material batch, a separately implemented and explicitly labeled rigid-terrain approximation for 1,024 environments, or larger hardware plus a scalable MPM implementation. The toolkit does not silently replace live sand/mud physics with rigid collision surfaces.
+
+## Four-environment live training launch
+
+After the user requested starting the recommended route, a **4-env / 2,000-iteration** live-material curriculum run was launched in `outputs/lafan-dance-live-4env-2000`. This is 192,000 rollout transitions, not the 49,152,000 transitions of the original 1,024-env request. It starts at ground level 0 on the existing 256-tile map. The 1,024-env configuration remains unlaunched.
+
+A preceding four-env mixed-level preflight completed one PPO update, produced finite changed parameters, and saved a student checkpoint. The long run uses a frozen copy of the terrain Python source, the single complete LAFAN dance clip, G1-only reference encoding and the step-8,000 teacher warm start. A rolling checkpoint is saved every 25 iterations; numbered checkpoints every 100. Learning success and eventual terrain promotion remain to be evaluated.
+
+`dry_training_progress.DryTrainingProgress` writes an atomic `progress.json` after each optimizer iteration, including transition count, finite robot-state checks, current curriculum levels and recent episode metrics. This progress status must be read together with the launcher process and final `train-receipt.json`; a stale progress file is not evidence that a process remains alive. `launch.json` records the background supervisor PID and process-start identity. Raw logs, data and checkpoints remain local and ignored by Git.
