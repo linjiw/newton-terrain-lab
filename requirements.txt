@@ -1,0 +1,5 @@
+# CPU map generation/export and plotting (Python 3.11 recommended)
+numpy>=1.26,<3
+usd-core==26.3
+PyYAML>=6,<7
+matplotlib>=3.8,<4

@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-13",
+  "cpu_tests": {
+    "passed": 12,
+    "optional_torch_skipped": 1,
+    "fresh_environment": true
+  },
+  "native_torch_contact_test": {
+    "passed": 1
+  },
+  "ruff": "passed",
+  "map": {
+    "tiles": 256,
+    "combinations": 15,
+    "mujoco_rigid_geometries": 3270,
+    "water": false
+  },
+  "native_evaluation": {
+    "exit_code": 0,
+    "wall_seconds": 44.01880761900975,
+    "num_envs": 2,
+    "steps": 120,
+    "finite": true,
+    "selective_reset_checks": [
+      {
+        "tick": 60,
+        "other_robot_states_unchanged": true
+      }
+    ],
+    "automatic_done_count": 0,
+    "action_shape": [
+      120,
+      2,
+      29
+    ],
+    "reward_shape": [
+      120,
+      2
+    ],
+    "surface_updates": 24
+  },
+  "ppo_smoke": {
+    "exit_code": 0,
+    "wall_seconds": 15.348605256993324,
+    "global_step": 1,
+    "policy_changed": true,
+    "finite_parameters": true,
+    "optimizer_state_entries": 69,
+    "final_policy_hash": "862ec26d5b745197425d3106d8936f3c7326f36950fa94b4f36f4eda6e4bcd7c",
+    "num_envs": 2,
+    "transitions": 16,
+    "initial_level": 3,
+    "loaded_motion_count": 1,
+    "worker_environment": "fresh requirements-sim installation"
+  },
+  "newton_sand_probe": {
+    "frames": 20,
+    "exit_code": 0,
+    "fresh_environment": true
+  },
+  "calibrated_soil": false,
+  "sustained_training_validated": false
+}

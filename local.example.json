@@ -1,0 +1,15 @@
+{
+  "sonic_root": "/absolute/path/to/sonic_root",
+  "isaac_python": "/absolute/path/to/isaac_python",
+  "newton_python": "/absolute/path/to/newton_python",
+  "native_site_packages": "/absolute/path/to/native_site_packages",
+  "teacher_runtime": "/absolute/path/to/teacher_runtime",
+  "teacher_scripts": "/absolute/path/to/teacher_scripts",
+  "checkpoint": "/absolute/path/to/checkpoint",
+  "checkpoint_sha256": "YOUR_CHECKPOINT_SHA256",
+  "model_dir": "/absolute/path/to/model_dir",
+  "reference_dir": "/absolute/path/to/reference_dir",
+  "dataset_manifest": "/absolute/path/to/dataset_manifest",
+  "eval_motion_file": "/absolute/path/to/eval_motion_file",
+  "robot_xml": "/absolute/path/to/robot_xml"
+}

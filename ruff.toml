@@ -1,0 +1,6 @@
+target-version = "py311"
+extend-exclude = [".venv", ".venv-teacher", "outputs"]
+[lint]
+select = ["E4", "E7", "E9", "F"]
+# Native dependency/source bootstrapping must precede dependent imports.
+ignore = ["E402"]
