@@ -94,3 +94,11 @@ To adapt a different Isaac Lab task, implement equivalent hooks for root/joint/C
 For live materials, construct `MPMBridge(model, data, selected_cells, voxel_size=0.04)`. At each host physics step call `step_mujoco(model, data, dt)`, assign its world-frame force/torque array to `data.xfrc_applied`, and advance MuJoCo. Rebuild/reset material state when episodes reset. If your application has other external forces, compose them deliberately instead of overwriting them.
 
 For Isaac Sim, load the USD for geometry and attach a bridge that converts native body COM states to worker coordinates and applies returned wrenches. The shipped `DryTerrainRuntime` does this through Isaac Lab; there is no general standalone Isaac Sim extension installer. A USDA import or surface replay alone never activates material physics.
+
+## Record videos and hold evaluation conditions fixed
+
+`python terrain_doctor.py --native` checks installed packages, configured files and native Python modules without launching physics. It is a setup check, not a task/GPU compatibility guarantee.
+
+Pass `--record-surfaces` to `prepare_dry_run.py` to save native joint/root states and numeric surface snapshots for `render_dry_showcase.py`. See [the recording guide](showcase.md). Training has recording disabled by default.
+
+For controlled material evaluation, `--eval-tiles 1,5 --num-envs 2` binds environments to sand and mud respectively on the default seed-23 map. Explicit tiles remain exclusive and unchanged across resets. Native failures and policy-history resets still occur; the assigned condition's level overrides curriculum changes for these evaluation environments. The generated training runtime always clears explicit tiles and retains random curriculum allocation. Without this flag, evaluation continues using the normal curriculum, including demotion after failure.

@@ -22,6 +22,9 @@ class DryEvaluationCallback:
         dones = torch.zeros(wrapper.num_envs, device=wrapper.device, dtype=torch.bool)
         actions = []
         poses = []
+        joint_poses = []
+        tile_ids = []
+        generations = []
         done_rows = []
         rewards = []
         isolation = []
@@ -48,9 +51,19 @@ class DryEvaluationCallback:
                 obs, reward, dones, _ = wrapper.step({"actions": action})
                 if not torch.isfinite(action).all() or not torch.isfinite(reward).all():
                     raise ValueError("Invalid training transition")
+                if (
+                    not torch.isfinite(runtime.robot.data.root_state_w).all()
+                    or not torch.isfinite(runtime.robot.data.joint_pos).all()
+                ):
+                    raise ValueError("Nonfinite measured robot pose")
                 actions.append(action.cpu().numpy())
                 rewards.append(reward.cpu().numpy())
                 poses.append(runtime.robot.data.root_state_w.cpu().numpy())
+                joint_poses.append(runtime.robot.data.joint_pos.cpu().numpy())
+                tile_ids.append(
+                    [runtime.allocator.assignments[i] for i in range(wrapper.num_envs)]
+                )
+                generations.append(runtime.generations.copy())
                 done_rows.append(dones.cpu().numpy())
         if self.config.get("visualize") and runtime.surface_updates == 0:
             raise RuntimeError("No live surfaces produced")
@@ -61,6 +74,12 @@ class DryEvaluationCallback:
             root_state=poses,
             rewards=rewards,
             dones=done_rows,
+            joint_pos=joint_poses,
+            joint_names=np.asarray(runtime.robot.joint_names),
+            tile_ids=tile_ids,
+            generations=generations,
+            time_s=(np.arange(len(poses)) + 1) * wrapper.env.step_dt,
+            control_dt=wrapper.env.step_dt,
         )
         (out / "evaluation.json").write_text(
             json.dumps(

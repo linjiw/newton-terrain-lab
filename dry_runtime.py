@@ -22,6 +22,7 @@ class DryTerrainRuntime:
         self.config = config
         self.env.dry_terrain = self
         self.surface_updates = 0
+        self.physics_ticks = 0
         self.course = json.loads(Path(config["course"]).read_text())
         self.allocator = TileAllocator(self.course, self.env.num_envs, config["seed"])
         self.metrics = TerrainCurriculumState(self.env.num_envs)
@@ -88,7 +89,16 @@ class DryTerrainRuntime:
 
     def assign(self, ids):
         previous = {i: self.allocator.assignments.get(i) for i in ids}
-        chosen = self.allocator.assign(ids, self.metrics.scheduler.levels)
+        if self.config.get("eval_tiles") is not None:
+            chosen = self.allocator.assign_tiles(
+                {i: self.config["eval_tiles"][i] for i in ids}
+            )
+            for i in ids:
+                self.metrics.scheduler.levels[i] = self.course["cells"][chosen[i]][
+                    "level"
+                ]
+        else:
+            chosen = self.allocator.assign(ids, self.metrics.scheduler.levels)
         origins = []
         for i in ids:
             origin = np.array(self.course["cells"][chosen[i]]["origin"], dtype=float)
@@ -112,17 +122,19 @@ class DryTerrainRuntime:
             stage = omni.usd.get_context().get_stage()
             for i in ids:
                 stage.RemovePrim(f"/World/DryLive/env_{i}")
-                for tile, visible in [(previous[i], True), (chosen[i], False)]:
-                    if tile is None:
-                        continue
-                    for j in range(len(self.course["cells"][tile]["patches"])):
-                        prim = stage.GetPrimAtPath(
-                            f"/World/ground/terrain/Cell_{tile:02d}/material_{j}"
+            visibility = {tile: True for tile in previous.values() if tile is not None}
+            visibility.update(
+                {tile: False for tile in self.allocator.assignments.values()}
+            )
+            for tile, visible in visibility.items():
+                for j in range(len(self.course["cells"][tile]["patches"])):
+                    prim = stage.GetPrimAtPath(
+                        f"/World/ground/terrain/Cell_{tile:02d}/material_{j}"
+                    )
+                    if prim:
+                        UsdGeom.Imageable(prim).GetVisibilityAttr().Set(
+                            "inherited" if visible else "invisible"
                         )
-                        if prim:
-                            UsdGeom.Imageable(prim).GetVisibilityAttr().Set(
-                                "inherited" if visible else "invisible"
-                            )
             if 0 in ids:
                 origin = self.env.scene.env_origins[0].detach().cpu().numpy()
                 self.env.sim.set_camera_view(
@@ -195,7 +207,19 @@ class DryTerrainRuntime:
         payload = self.request(
             {"batch": batch, "render": self.config.get("visualize", False)}
         )
+        self.physics_ticks += 1
         if "surfaces" in payload:
+            if self.config.get("record_surfaces"):
+                from surface_recording import save_surface_frame
+
+                save_surface_frame(
+                    Path(self.config["output"]) / "surfaces",
+                    self.physics_ticks,
+                    self.env.physics_dt,
+                    payload["surfaces"],
+                    self.allocator.assignments,
+                    self.generations,
+                )
             self.surface_updates += 1
             from pxr import UsdGeom, Gf
             import omni.usd

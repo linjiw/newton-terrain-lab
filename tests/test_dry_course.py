@@ -36,6 +36,16 @@ class DryCourseTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             TileAllocator(course, 65)
 
+    def test_explicit_evaluation_tiles_remain_exclusive(self):
+        allocator = TileAllocator(make_dry_course(), 2)
+        self.assertEqual(allocator.assign_tiles({0: 1, 1: 5}), {0: 1, 1: 5})
+        with self.assertRaises(ValueError):
+            allocator.assign_tiles({0: 5})
+        self.assertEqual(allocator.assignments, {0: 1, 1: 5})
+        with self.assertRaises(ValueError):
+            allocator.assign_tiles({0: 999})
+        self.assertEqual(allocator.assign_tiles({0: 5, 1: 1}), {0: 5, 1: 1})
+
     def test_ground_curriculum_can_promote_without_material(self):
         c = TerrainCurriculumState(1)
         for _ in range(3):

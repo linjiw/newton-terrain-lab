@@ -15,6 +15,11 @@ p.add_argument("--output", type=Path, required=True)
 p.add_argument("--course-dir", type=Path, default=ROOT / "assets/dry-map")
 p.add_argument("--num-envs", type=int, default=2)
 p.add_argument("--surfaces", action="store_true")
+p.add_argument(
+    "--record-surfaces",
+    action="store_true",
+    help="Save measured meshes and joint poses for offline videos",
+)
 p.add_argument("--initial-level", type=int, choices=range(4), default=1)
 p.add_argument("--selective-reset-at", type=int, default=-1)
 p.add_argument("--steps", type=int, default=100)
@@ -23,6 +28,10 @@ p.add_argument("--training-iterations", type=int, default=100)
 p.add_argument("--ppo-epochs", type=int, default=1)
 p.add_argument("--rollout-steps", type=int, default=24)
 p.add_argument("--seed", type=int, default=23)
+p.add_argument(
+    "--eval-tiles",
+    help="Comma-separated exclusive tile IDs; evaluation stays on these conditions across resets",
+)
 a = p.parse_args()
 if (
     min(
@@ -39,7 +48,12 @@ if (
 from dry_course import TileAllocator
 
 course = a.course_dir / "course.json"
-TileAllocator(json.loads(course.read_text()), a.num_envs)
+allocator = TileAllocator(json.loads(course.read_text()), a.num_envs)
+eval_tiles = [int(x) for x in a.eval_tiles.split(",")] if a.eval_tiles else None
+if eval_tiles is not None:
+    if len(eval_tiles) != a.num_envs:
+        raise ValueError("--eval-tiles needs one tile ID per environment")
+    allocator.assign_tiles(dict(enumerate(eval_tiles)))
 out = a.output.resolve()
 out.mkdir(parents=True, exist_ok=False)
 (out / "course.json").write_bytes(course.read_bytes())
@@ -49,7 +63,8 @@ stage.RemovePrim("/World/PhysicsScene")
 stage.GetRootLayer().Export(str(out / "course.usda"))
 checkpoint = setting("checkpoint")
 runtime = dict(
-    visualize=a.surfaces,
+    visualize=a.surfaces or a.record_surfaces,
+    record_surfaces=a.record_surfaces,
     course=str(course),
     checkpoint=checkpoint,
     output=str(out / "run"),
@@ -59,6 +74,7 @@ runtime = dict(
     steps=a.steps,
     selective_reset_at=a.selective_reset_at,
     num_envs=a.num_envs,
+    eval_tiles=eval_tiles,
 )
 (out / "runtime.json").write_text(json.dumps(runtime, indent=2))
 (out / "train-runtime.json").write_text(
@@ -68,6 +84,8 @@ runtime = dict(
             "output": str(out / "train-runtime"),
             "initial_level": 0,
             "visualize": False,
+            "record_surfaces": False,
+            "eval_tiles": None,
         },
         indent=2,
     )

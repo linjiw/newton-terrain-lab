@@ -1,0 +1,7 @@
+-r requirements-sim.txt
+imageio[ffmpeg]>=2.34,<3
+freetype-py>=2.4,<3
+pyglet>=1.5,<2
+# Then: pip install --no-deps pyrender==0.1.45
+# Upstream pyrender pins an old PyOpenGL; use the PyOpenGL installed by MuJoCo.
+networkx>=3,<4

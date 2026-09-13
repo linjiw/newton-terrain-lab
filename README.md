@@ -1,5 +1,7 @@
 # Newton Terrain Lab
 
+**[Explore the live showcase →](https://linjiw.github.io/newton-terrain-lab/)** · [Watch recorded native rollouts](https://linjiw.github.io/newton-terrain-lab/#simulations) · [Record your own](docs/showcase.md)
+
 Reproducible terrain generation and experimental humanoid motion tracking on ground, sand, mud and rocks, with Newton MPM coupled to MuJoCo or Isaac Lab / Isaac Sim.
 
 The default **167.5 × 167.5 m map** has **256 tiles**, **15 combinations** of ground/sand/mud/rocks, deterministic rock placement, random exclusive environment allocation, and four curriculum levels. Water is excluded from this training map.
@@ -46,7 +48,7 @@ Read **[the integration guide](docs/integration.md)** for required external file
 
 1. Generate a map and install Newton in a separate Python environment.
 2. Configure your native Isaac/SONIC environment, compatible robot, checkpoint and disjoint motion pools in ignored `local.json`.
-3. Prepare a fresh evaluation/training folder with `prepare_dry_run.py`.
+3. Run `python terrain_doctor.py --native` to check local dependencies, then prepare a fresh evaluation/training folder with `prepare_dry_run.py`.
 4. Run a short evaluation, inspect finite-state/reset/contact receipts, then launch a small PPO smoke test before a longer curriculum run.
 
 ```bash

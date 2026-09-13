@@ -1,0 +1,314 @@
+{
+  "date": "2026-09-13",
+  "checkpoint": {
+    "label": "SONIC teacher step 8000",
+    "sha256": "48b3a1c04cdbbcd9ffe8ad10b2591aff781c253c03c61ccb8683348d862c54ed",
+    "selection": "Strongest measured candidate in the available local single-seed 20-motion repaired-development comparison; not a universal best-model claim",
+    "development_completed": 11,
+    "development_total": 20,
+    "development_mean_progress": 0.714801391121,
+    "training_exposure_matched": false
+  },
+  "native_runs": [
+    {
+      "name": "mixed",
+      "exit_code": 0,
+      "wall_seconds": 155.42992764199153,
+      "num_envs": 2,
+      "steps": 500,
+      "finite": true,
+      "selective_reset_checks": [],
+      "automatic_done_count": 6,
+      "action_shape": [
+        500,
+        2,
+        29
+      ],
+      "reward_shape": [
+        500,
+        2
+      ],
+      "finite_robot_states": true,
+      "surface_updates": 100,
+      "worker_exit_code": 0,
+      "episode_metrics": [
+        {
+          "env_id": 0,
+          "proposed_level": 2,
+          "fell": true,
+          "root_rmse": 0.06547260488093125,
+          "joint_rmse": 0.11275072806044033,
+          "exposure_seconds": 0.06,
+          "episode_seconds": 4.039999999999999,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 1,
+          "proposed_level": 2,
+          "fell": true,
+          "root_rmse": 0.11343272605609318,
+          "joint_rmse": 0.11691763838271792,
+          "exposure_seconds": 0.30500000000000005,
+          "episode_seconds": 4.079999999999999,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 0,
+          "proposed_level": 1,
+          "fell": true,
+          "root_rmse": 0.06774290350781374,
+          "joint_rmse": 0.11864917162439202,
+          "exposure_seconds": 0.385,
+          "episode_seconds": 1.9399999999999997,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 1,
+          "proposed_level": 1,
+          "fell": true,
+          "root_rmse": 0.07818420042909469,
+          "joint_rmse": 0.12719382875626656,
+          "exposure_seconds": 1.1600000000000001,
+          "episode_seconds": 2.46,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 0,
+          "proposed_level": 0,
+          "fell": true,
+          "root_rmse": 0.08124121016158894,
+          "joint_rmse": 0.12264786476825172,
+          "exposure_seconds": 0.54,
+          "episode_seconds": 2.0799999999999996,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 1,
+          "proposed_level": 0,
+          "fell": true,
+          "root_rmse": 0.09705684341707875,
+          "joint_rmse": 0.12830123648584554,
+          "exposure_seconds": 1.1950000000000003,
+          "episode_seconds": 2.5,
+          "numerically_valid": true
+        }
+      ],
+      "final_levels": [
+        0,
+        0
+      ],
+      "per_environment_terminations": [
+        3,
+        3
+      ],
+      "reference_motion_id": "00265",
+      "seconds": 10,
+      "voxel_size_m": 0.04,
+      "fixed_tiles": null
+    },
+    {
+      "name": "controlled",
+      "exit_code": 0,
+      "wall_seconds": 228.8258705499902,
+      "num_envs": 2,
+      "steps": 500,
+      "finite": true,
+      "selective_reset_checks": [],
+      "automatic_done_count": 7,
+      "action_shape": [
+        500,
+        2,
+        29
+      ],
+      "reward_shape": [
+        500,
+        2
+      ],
+      "finite_robot_states": true,
+      "surface_updates": 100,
+      "worker_exit_code": 0,
+      "episode_metrics": [
+        {
+          "env_id": 1,
+          "proposed_level": 0,
+          "fell": true,
+          "root_rmse": 0.07390847205342205,
+          "joint_rmse": 0.1193793209167869,
+          "exposure_seconds": 0.72,
+          "episode_seconds": 2.0799999999999996,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 0,
+          "proposed_level": 0,
+          "fell": true,
+          "root_rmse": 0.04414944923790946,
+          "joint_rmse": 0.11354582372268139,
+          "exposure_seconds": 1.23,
+          "episode_seconds": 2.64,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 1,
+          "proposed_level": 0,
+          "fell": true,
+          "root_rmse": 0.07846679212409097,
+          "joint_rmse": 0.12069023197920199,
+          "exposure_seconds": 0.7150000000000002,
+          "episode_seconds": 1.9999999999999998,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 0,
+          "proposed_level": 0,
+          "fell": true,
+          "root_rmse": 0.08603476616802583,
+          "joint_rmse": 0.12691192579113147,
+          "exposure_seconds": 1.0000000000000002,
+          "episode_seconds": 2.52,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 1,
+          "proposed_level": 0,
+          "fell": true,
+          "root_rmse": 0.09219835202603087,
+          "joint_rmse": 0.12791650510009975,
+          "exposure_seconds": 0.6500000000000001,
+          "episode_seconds": 2.0599999999999996,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 0,
+          "proposed_level": 0,
+          "fell": true,
+          "root_rmse": 0.06955149395404374,
+          "joint_rmse": 0.12178873713211164,
+          "exposure_seconds": 1.1050000000000002,
+          "episode_seconds": 2.5,
+          "numerically_valid": true
+        },
+        {
+          "env_id": 1,
+          "proposed_level": 0,
+          "fell": true,
+          "root_rmse": 0.09483781830455829,
+          "joint_rmse": 0.12672307682917122,
+          "exposure_seconds": 0.8300000000000001,
+          "episode_seconds": 2.0799999999999996,
+          "numerically_valid": true
+        }
+      ],
+      "final_levels": [
+        1,
+        1
+      ],
+      "per_environment_terminations": [
+        3,
+        4
+      ],
+      "reference_motion_id": "00265",
+      "seconds": 10,
+      "voxel_size_m": 0.04,
+      "fixed_tiles": [
+        1,
+        5
+      ]
+    }
+  ],
+  "clips": {
+    "mixed": {
+      "frames": 250,
+      "fps": 25.0,
+      "duration_s": 10.0,
+      "env_id": 0,
+      "tiles": [
+        7,
+        74,
+        117,
+        0
+      ],
+      "model_label": "SONIC / teacher step 8,000",
+      "checkpoint_sha256": "48b3a1c04cdbbcd9ffe8ad10b2591aff781c253c03c61ccb8683348d862c54ed",
+      "rollout_sha256": "49934561eeaaeff974772a0ae874dc9d1ce7bffa50890e619784a8bb144f52fa",
+      "surface_snapshots": 100,
+      "triangle_count_range": [
+        46912,
+        125876
+      ],
+      "wall_seconds": 6.353560011004447,
+      "physics_stepped_during_render": false,
+      "robot_pose_source": "measured native root and joint states",
+      "surface_source": "measured Newton ParticleSurface at 10 Hz; latest sample within same episode",
+      "physics_surface_lag_s": 0.005,
+      "resets_visible": true,
+      "automatic_done_count": 3,
+      "video_sha256": "43959316ae37e0f018511d9152444944b858afb05ed6cc524e020a9c968c6846"
+    },
+    "sand": {
+      "frames": 250,
+      "fps": 25.0,
+      "duration_s": 10.0,
+      "env_id": 0,
+      "tiles": [
+        1
+      ],
+      "model_label": "SONIC / teacher step 8,000",
+      "checkpoint_sha256": "48b3a1c04cdbbcd9ffe8ad10b2591aff781c253c03c61ccb8683348d862c54ed",
+      "rollout_sha256": "0380dc1bac99703f609828358ea0517d660e223405f3b6993baa01186ae5d27c",
+      "surface_snapshots": 100,
+      "triangle_count_range": [
+        123164,
+        124420
+      ],
+      "wall_seconds": 7.675718529004371,
+      "physics_stepped_during_render": false,
+      "robot_pose_source": "measured native root and joint states",
+      "surface_source": "measured Newton ParticleSurface at 10 Hz; latest sample within same episode",
+      "physics_surface_lag_s": 0.005,
+      "resets_visible": true,
+      "automatic_done_count": 3,
+      "video_sha256": "d55dc782d5919dfb04299969b157d69fee5de892cb9e7dd919d03a0969923ead"
+    },
+    "mud": {
+      "frames": 250,
+      "fps": 25.0,
+      "duration_s": 10.0,
+      "env_id": 1,
+      "tiles": [
+        5
+      ],
+      "model_label": "SONIC / teacher step 8,000",
+      "checkpoint_sha256": "48b3a1c04cdbbcd9ffe8ad10b2591aff781c253c03c61ccb8683348d862c54ed",
+      "rollout_sha256": "0380dc1bac99703f609828358ea0517d660e223405f3b6993baa01186ae5d27c",
+      "surface_snapshots": 100,
+      "triangle_count_range": [
+        123164,
+        123808
+      ],
+      "wall_seconds": 7.67536518900306,
+      "physics_stepped_during_render": false,
+      "robot_pose_source": "measured native root and joint states",
+      "surface_source": "measured Newton ParticleSurface at 10 Hz; latest sample within same episode",
+      "physics_surface_lag_s": 0.005,
+      "resets_visible": true,
+      "automatic_done_count": 4,
+      "video_sha256": "c94358665f1d53214307d81b9acfa116c3690809948000e73ad0f0271752bfcc"
+    }
+  },
+  "limitations": [
+    "Uncalibrated materials",
+    "Fixed diagnostic stopping-motion reference, not a multi-motion terrain benchmark",
+    "Native terminations are visible; process success is not policy success",
+    "Offline measured replay; no browser physics",
+    "Latest 10 Hz surface sample within each episode; 5 ms external coupling approximation"
+  ],
+  "tests": {
+    "cpu_passed": 15,
+    "optional_torch_passed_separately": 1
+  },
+  "discarded_pilot": {
+    "note": "A random level-1 pilot completed finite frames but its launcher session ended with SIGTERM (143) without a launcher receipt. It is not used in the curated videos. Controlled evaluation was rerun successfully.",
+    "finite_frames": 500
+  }
+}

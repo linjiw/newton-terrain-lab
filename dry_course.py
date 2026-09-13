@@ -111,6 +111,21 @@ class TileAllocator:
         ):
             raise ValueError("Not enough exclusive tiles per curriculum level")
 
+    def assign_tiles(self, mapping):
+        """Explicit exclusive allocation for controlled evaluation conditions."""
+        chosen = {int(env): int(tile) for env, tile in mapping.items()}
+        if any(env < 0 or env >= self.num_envs for env in chosen):
+            raise ValueError("Invalid environment IDs")
+        if any(
+            tile < 0 or tile >= len(self.course["cells"]) for tile in chosen.values()
+        ):
+            raise ValueError("Invalid tile IDs")
+        updated = {**self.assignments, **chosen}
+        if len(set(updated.values())) != len(updated):
+            raise ValueError("Tile allocation must remain exclusive")
+        self.assignments = updated
+        return chosen
+
     def assign(self, env_ids, levels):
         ids = [int(i) for i in env_ids]
         if len(ids) != len(set(ids)) or any(i < 0 or i >= self.num_envs for i in ids):
