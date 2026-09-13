@@ -18,6 +18,17 @@ folder = a.folder.resolve()
 root = Path(__file__).parent.resolve()
 command = json.loads((folder / f"{a.mode}-command.json").read_text())
 runtime_path = folder / ("train-runtime.json" if a.mode == "train" else "runtime.json")
+config = json.loads(runtime_path.read_text())
+if config["num_envs"] > 4:
+    from terrain_capacity import screen_runtime
+
+    capacity = screen_runtime(config)
+    (folder / f"{a.mode}-capacity.json").write_text(json.dumps(capacity, indent=2))
+    if capacity["particle_state_exceeds_available"]:
+        raise RuntimeError(
+            "Live MPM curriculum particle state alone exceeds available GPU memory; see "
+            + str(folder / f"{a.mode}-capacity.json")
+        )
 label = a.mode
 if a.view:
     if a.mode != "eval":

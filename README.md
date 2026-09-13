@@ -63,6 +63,8 @@ python run_dry.py outputs/check --mode train
 
 Preparation does not launch training. Evaluation starts at the requested level; training starts at ground level 0. Environment origins are assigned to random exclusive tiles on reset, with a small safe-pad jitter. This is not unrestricted random placement inside deformable patches. The default allocator can reserve 64 environments at every level; **64 is a map-capacity bound, not demonstrated training throughput**. Current workers step independent MPM worlds sequentially over batched IPC.
 
+For single-motion LAFAN dance preparation and the 1,024-env memory assessment, see [LAFAN training](docs/lafan-training.md). The requested large live-material run is prepared but not launched.
+
 ## Physics and rendering
 
 Sand uses density 1600 kg/m³ and friction 0.75; mud uses density 1500 kg/m³, viscosity 100 Pa·s and yield stress 300 Pa. Full assumptions, resolution limits, force conventions and failed water checks are in **[the physics guide](docs/physics.md)**.

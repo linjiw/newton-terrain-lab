@@ -139,7 +139,7 @@ def add_mujoco_solids(tree, course):
         )
 
 
-def export(root, course=None):
+def export(root, course=None, *, preview_particles=True):
     from pxr import Usd, UsdGeom, UsdPhysics, UsdShade, Gf
 
     root = Path(root)
@@ -181,7 +181,7 @@ def export(root, course=None):
             UsdPhysics.CollisionAPI.Apply(cube.GetPrim())
             bind_physics(cube.GetPrim())
         for i, p in enumerate(cell["patches"]):
-            if p["material"] == "ground":
+            if p["material"] == "ground" or not preview_particles:
                 continue
             lo = np.array(p["lo"]) + cell["origin"]
             hi = np.array(p["hi"]) + cell["origin"]

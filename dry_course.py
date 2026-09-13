@@ -157,12 +157,17 @@ if __name__ == "__main__":
     parser.add_argument("--rows", type=int, default=16)
     parser.add_argument("--columns", type=int, default=16)
     parser.add_argument("--seed", type=int, default=23)
+    parser.add_argument(
+        "--no-particle-previews",
+        action="store_true",
+        help="Omit static display points from large USD exports; live physics is unchanged",
+    )
     args = parser.parse_args()
     if min(args.rows, args.columns) < 1:
         parser.error("rows and columns must be positive")
     args.output.mkdir(parents=True, exist_ok=False)
     course = make_dry_course(args.rows, args.columns, args.seed)
-    export(args.output, course)
+    export(args.output, course, preview_particles=not args.no_particle_previews)
     print(
         json.dumps(
             dict(output=str(args.output), cells=len(course["cells"]), water=False)

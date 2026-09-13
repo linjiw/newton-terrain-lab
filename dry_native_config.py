@@ -1,6 +1,9 @@
 """Native SONIC configuration for the water-free multi-environment map."""
 
 import copy
+import json
+from pathlib import Path
+from dry_course import TileAllocator
 from gear_sonic.envs.manager_env.modular_tracking_env_cfg import ModularTrackingEnvCfg
 
 
@@ -20,10 +23,8 @@ class DryTrackingEnvCfg(ModularTrackingEnvCfg):
     def override_settings(self):
         super().override_settings()
         n = self.scene.num_envs
-        if n > 64:
-            raise ValueError(
-                "Default map has 64 exclusive tiles per level; enlarge it before increasing num_envs"
-            )
+        course_path = Path(self.config["scene_usd_path"]).with_name("course.json")
+        TileAllocator(json.loads(course_path.read_text()), n)
         p = self.sim.physx
         p.gpu_max_rigid_contact_count = max(2**18, n * 8192)
         p.gpu_max_rigid_patch_count = max(2**16, n * 2048)
