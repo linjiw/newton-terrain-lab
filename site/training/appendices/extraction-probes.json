@@ -1,0 +1,410 @@
+[
+  {
+    "material": "sand",
+    "depth_m": 0.04,
+    "voxel_size": 0.02,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.030188603292910003,
+    "finite_particles": true,
+    "max_abs_material_force_n": 1929.7185932243858,
+    "max_rigid_contact_generalized_force_n": 0.0,
+    "material_parameters": {
+      "density": 1600.0,
+      "friction": 0.75,
+      "viscosity": 0.0,
+      "yield_stress": 0.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.17000000000000004,
+        "final_sole_z_m": 0.09798636222012348,
+        "upward_material_resistance_work_j": 0.0028513053981810334,
+        "positive_actuator_work_j": 22.2854159344757
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.18999999999999995,
+        "final_sole_z_m": 0.09785443647914387,
+        "upward_material_resistance_work_j": 0.06541301155553934,
+        "positive_actuator_work_j": 24.208409073475213
+      }
+    ]
+  },
+  {
+    "material": "sand",
+    "depth_m": 0.04,
+    "voxel_size": 0.01,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.038706079571182994,
+    "finite_particles": true,
+    "max_abs_material_force_n": 1950.4868425970167,
+    "max_rigid_contact_generalized_force_n": 0.0,
+    "material_parameters": {
+      "density": 1600.0,
+      "friction": 0.75,
+      "viscosity": 0.0,
+      "yield_stress": 0.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.18000000000000005,
+        "final_sole_z_m": 0.09778781879602623,
+        "upward_material_resistance_work_j": 0.0097135164926504,
+        "positive_actuator_work_j": 23.344601498657216
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.20500000000000007,
+        "final_sole_z_m": 0.09757193288660977,
+        "upward_material_resistance_work_j": 0.08200161858889074,
+        "positive_actuator_work_j": 25.31547552124599
+      }
+    ]
+  },
+  {
+    "material": "sand",
+    "depth_m": 0.14,
+    "voxel_size": 0.02,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.06750581066944279,
+    "finite_particles": true,
+    "max_abs_material_force_n": 836.5609359573714,
+    "max_rigid_contact_generalized_force_n": 0.0,
+    "material_parameters": {
+      "density": 1600.0,
+      "friction": 0.75,
+      "viscosity": 0.0,
+      "yield_stress": 0.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.20500000000000007,
+        "final_sole_z_m": 0.09776215651558241,
+        "upward_material_resistance_work_j": 0.01690242566607293,
+        "positive_actuator_work_j": 25.178035163413544
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.2549999999999999,
+        "final_sole_z_m": 0.09733276925978794,
+        "upward_material_resistance_work_j": 0.3391610626043032,
+        "positive_actuator_work_j": 32.00179400256912
+      }
+    ]
+  },
+  {
+    "material": "sand",
+    "depth_m": 0.14,
+    "voxel_size": 0.01,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.08447697210985979,
+    "finite_particles": true,
+    "max_abs_material_force_n": 809.6746659626115,
+    "max_rigid_contact_generalized_force_n": 0.0,
+    "material_parameters": {
+      "density": 1600.0,
+      "friction": 0.75,
+      "viscosity": 0.0,
+      "yield_stress": 0.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.22999999999999998,
+        "final_sole_z_m": 0.09737150372731936,
+        "upward_material_resistance_work_j": 0.0835254695569723,
+        "positive_actuator_work_j": 28.274762549891975
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.2799999999999998,
+        "final_sole_z_m": 0.09670759780056908,
+        "upward_material_resistance_work_j": 0.4136849998371188,
+        "positive_actuator_work_j": 34.90684582509796
+      }
+    ]
+  },
+  {
+    "material": "mud",
+    "depth_m": 0.04,
+    "voxel_size": 0.02,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.04984477182169543,
+    "finite_particles": true,
+    "max_abs_material_force_n": 878.0645447012087,
+    "max_rigid_contact_generalized_force_n": 2943.531403004012,
+    "material_parameters": {
+      "density": 1500.0,
+      "friction": 0.0,
+      "viscosity": 100.0,
+      "yield_stress": 300.0,
+      "yield_pressure": 10000000000.0,
+      "tensile_yield_ratio": 1.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.21999999999999997,
+        "final_sole_z_m": 0.09796159449600601,
+        "upward_material_resistance_work_j": 0.07673856212692082,
+        "positive_actuator_work_j": 26.838436215581343
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.21999999999999975,
+        "final_sole_z_m": 0.09795957928445749,
+        "upward_material_resistance_work_j": 0.08155536661151605,
+        "positive_actuator_work_j": 26.842763068743967
+      }
+    ]
+  },
+  {
+    "material": "mud",
+    "depth_m": 0.04,
+    "voxel_size": 0.01,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.04683562028239484,
+    "finite_particles": true,
+    "max_abs_material_force_n": 816.0860267471866,
+    "max_rigid_contact_generalized_force_n": 2550.538289085211,
+    "material_parameters": {
+      "density": 1500.0,
+      "friction": 0.0,
+      "viscosity": 100.0,
+      "yield_stress": 300.0,
+      "yield_pressure": 10000000000.0,
+      "tensile_yield_ratio": 1.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.21499999999999997,
+        "final_sole_z_m": 0.09764548644673594,
+        "upward_material_resistance_work_j": 0.055630873012599856,
+        "positive_actuator_work_j": 26.67248199365198
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.21999999999999975,
+        "final_sole_z_m": 0.09796299248274672,
+        "upward_material_resistance_work_j": 0.09997047252463126,
+        "positive_actuator_work_j": 26.85593035612685
+      }
+    ]
+  },
+  {
+    "material": "mud",
+    "depth_m": 0.14,
+    "voxel_size": 0.02,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.14361621936310554,
+    "finite_particles": true,
+    "max_abs_material_force_n": 1464.8123317810835,
+    "max_rigid_contact_generalized_force_n": 1067.1872679585374,
+    "material_parameters": {
+      "density": 1500.0,
+      "friction": 0.0,
+      "viscosity": 100.0,
+      "yield_stress": 300.0,
+      "yield_pressure": 10000000000.0,
+      "tensile_yield_ratio": 1.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.49,
+        "final_sole_z_m": 0.09588132622401101,
+        "upward_material_resistance_work_j": 4.693882638812144,
+        "positive_actuator_work_j": 48.36190343846667
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.33000000000000007,
+        "final_sole_z_m": 0.0954150821833966,
+        "upward_material_resistance_work_j": 4.453035729357502,
+        "positive_actuator_work_j": 50.42327209998828
+      }
+    ]
+  },
+  {
+    "material": "mud",
+    "depth_m": 0.14,
+    "voxel_size": 0.01,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.13853101238913648,
+    "finite_particles": true,
+    "max_abs_material_force_n": 2101.660644100759,
+    "max_rigid_contact_generalized_force_n": 0.0,
+    "material_parameters": {
+      "density": 1500.0,
+      "friction": 0.0,
+      "viscosity": 100.0,
+      "yield_stress": 300.0,
+      "yield_pressure": 10000000000.0,
+      "tensile_yield_ratio": 1.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.5049999999999999,
+        "final_sole_z_m": 0.09491944202356291,
+        "upward_material_resistance_work_j": 4.878107643567796,
+        "positive_actuator_work_j": 49.65375122907688
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.32499999999999973,
+        "final_sole_z_m": 0.09524060595046428,
+        "upward_material_resistance_work_j": 3.082131988122281,
+        "positive_actuator_work_j": 48.02038973748635
+      }
+    ]
+  },
+  {
+    "material": "sand",
+    "depth_m": 0.02,
+    "voxel_size": 0.02,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.02736458114947478,
+    "finite_particles": true,
+    "max_abs_material_force_n": 1079.1961401950625,
+    "max_rigid_contact_generalized_force_n": 2048.41672675258,
+    "material_parameters": {
+      "density": 1600.0,
+      "friction": 0.75,
+      "viscosity": 0.0,
+      "yield_stress": 0.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.15500000000000003,
+        "final_sole_z_m": 0.09852121272860455,
+        "upward_material_resistance_work_j": 0.0050391999144238,
+        "positive_actuator_work_j": 20.063608081425603
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.18500000000000005,
+        "final_sole_z_m": 0.09823914015244918,
+        "upward_material_resistance_work_j": 0.013897942676478125,
+        "positive_actuator_work_j": 22.956279243975395
+      }
+    ]
+  },
+  {
+    "material": "sand",
+    "depth_m": 0.02,
+    "voxel_size": 0.01,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.026776434726146048,
+    "finite_particles": true,
+    "max_abs_material_force_n": 945.9549035485873,
+    "max_rigid_contact_generalized_force_n": 1929.7380060509392,
+    "material_parameters": {
+      "density": 1600.0,
+      "friction": 0.75,
+      "viscosity": 0.0,
+      "yield_stress": 0.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.16000000000000003,
+        "final_sole_z_m": 0.09787213995709755,
+        "upward_material_resistance_work_j": 0.01207121247352504,
+        "positive_actuator_work_j": 22.024485202874896
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.18500000000000005,
+        "final_sole_z_m": 0.0982082907506905,
+        "upward_material_resistance_work_j": 0.010632449826949296,
+        "positive_actuator_work_j": 22.954174102633566
+      }
+    ]
+  },
+  {
+    "material": "mud",
+    "depth_m": 0.02,
+    "voxel_size": 0.02,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.027549091920329387,
+    "finite_particles": true,
+    "max_abs_material_force_n": 593.7264601167853,
+    "max_rigid_contact_generalized_force_n": 2798.9743662373216,
+    "material_parameters": {
+      "density": 1500.0,
+      "friction": 0.0,
+      "viscosity": 100.0,
+      "yield_stress": 300.0,
+      "yield_pressure": 10000000000.0,
+      "tensile_yield_ratio": 1.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.18500000000000005,
+        "final_sole_z_m": 0.09822814222836475,
+        "upward_material_resistance_work_j": 0.005609135331498494,
+        "positive_actuator_work_j": 22.951202180434006
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.18500000000000005,
+        "final_sole_z_m": 0.0982369176539253,
+        "upward_material_resistance_work_j": 0.003748154500519692,
+        "positive_actuator_work_j": 22.94903956746896
+      }
+    ]
+  },
+  {
+    "material": "mud",
+    "depth_m": 0.02,
+    "voxel_size": 0.01,
+    "mass_kg": 18.0,
+    "actuator_force_limit_n": 350.0,
+    "minimum_sole_z_m": -0.028466496622215162,
+    "finite_particles": true,
+    "max_abs_material_force_n": 629.0362688002789,
+    "max_rigid_contact_generalized_force_n": 2653.324559731428,
+    "material_parameters": {
+      "density": 1500.0,
+      "friction": 0.0,
+      "viscosity": 100.0,
+      "yield_stress": 300.0,
+      "yield_pressure": 10000000000.0,
+      "tensile_yield_ratio": 1.0
+    },
+    "lifts": [
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.18000000000000005,
+        "final_sole_z_m": 0.09809720542812485,
+        "upward_material_resistance_work_j": 0.0004486812940634882,
+        "positive_actuator_work_j": 22.909882085729052
+      },
+      {
+        "released_for_100ms": true,
+        "release_latency_s": 0.18500000000000005,
+        "final_sole_z_m": 0.09823655996732335,
+        "upward_material_resistance_work_j": 0.0036047547760149723,
+        "positive_actuator_work_j": 22.948887927777857
+      }
+    ]
+  }
+]

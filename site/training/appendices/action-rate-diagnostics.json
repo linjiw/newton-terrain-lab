@@ -1,0 +1,116 @@
+{
+  "runs": {
+    "start": {
+      "max_reward_accounting_error": 2.7835272078391426e-06,
+      "terrains": {
+        "ground": {
+          "valid_consecutive_pairs": 1493,
+          "clipped_pair_fraction": 0.0,
+          "mean_total_cost": 0.07191354925927677,
+          "mean_teacher_component": 0.07213570003187397,
+          "mean_residual_component": 0.00012630271859023578,
+          "mean_cross_component": -0.00034845349118740925
+        },
+        "sand": {
+          "valid_consecutive_pairs": 1477,
+          "clipped_pair_fraction": 0.15165876777251186,
+          "mean_total_cost": 1.5557010535017841,
+          "mean_teacher_component": 1.5515579768693635,
+          "mean_residual_component": 0.0016721659412302927,
+          "mean_cross_component": 0.002470910691192728
+        },
+        "mud": {
+          "valid_consecutive_pairs": 1482,
+          "clipped_pair_fraction": 0.12483130904183536,
+          "mean_total_cost": 1.560352235639859,
+          "mean_teacher_component": 1.5552267570838203,
+          "mean_residual_component": 0.0015341282906849863,
+          "mean_cross_component": 0.003591350265355752
+        },
+        "sand+mud+rocks": {
+          "valid_consecutive_pairs": 1477,
+          "clipped_pair_fraction": 0.11238997968855789,
+          "mean_total_cost": 1.5700353738413577,
+          "mean_teacher_component": 1.56588584237936,
+          "mean_residual_component": 0.0015478346183049477,
+          "mean_cross_component": 0.0026016968436926506
+        }
+      }
+    },
+    "scheduled": {
+      "max_reward_accounting_error": 1.6603106516299704e-06,
+      "terrains": {
+        "ground": {
+          "valid_consecutive_pairs": 1493,
+          "clipped_pair_fraction": 0.0,
+          "mean_total_cost": 0.07536702440208225,
+          "mean_teacher_component": 0.07499689371455824,
+          "mean_residual_component": 0.0003067316769900755,
+          "mean_cross_component": 6.339901053391759e-05
+        },
+        "sand": {
+          "valid_consecutive_pairs": 1477,
+          "clipped_pair_fraction": 0.12931618144888288,
+          "mean_total_cost": 1.4974224084923293,
+          "mean_teacher_component": 1.489912552356611,
+          "mean_residual_component": 0.0018587081711116844,
+          "mean_cross_component": 0.0056511479646075705
+        },
+        "mud": {
+          "valid_consecutive_pairs": 1483,
+          "clipped_pair_fraction": 0.0930546190155091,
+          "mean_total_cost": 1.3844140864062076,
+          "mean_teacher_component": 1.3772400393392197,
+          "mean_residual_component": 0.001826602477494576,
+          "mean_cross_component": 0.005347444589493599
+        },
+        "sand+mud+rocks": {
+          "valid_consecutive_pairs": 1477,
+          "clipped_pair_fraction": 0.12999322951929587,
+          "mean_total_cost": 1.617148571058257,
+          "mean_teacher_component": 1.610209701400032,
+          "mean_residual_component": 0.0021333523713142387,
+          "mean_cross_component": 0.004805517286907997
+        }
+      }
+    },
+    "target": {
+      "max_reward_accounting_error": 3.711605483402991e-06,
+      "terrains": {
+        "ground": {
+          "valid_consecutive_pairs": 1493,
+          "clipped_pair_fraction": 0.0,
+          "mean_total_cost": 0.08023473499286203,
+          "mean_teacher_component": 0.08015736853290789,
+          "mean_residual_component": 0.0004245344185885537,
+          "mean_cross_component": -0.00034716795863441784
+        },
+        "sand": {
+          "valid_consecutive_pairs": 1476,
+          "clipped_pair_fraction": 0.17750677506775067,
+          "mean_total_cost": 1.6990338116551122,
+          "mean_teacher_component": 1.6916228376357,
+          "mean_residual_component": 0.004597070433379965,
+          "mean_cross_component": 0.002813903586027615
+        },
+        "mud": {
+          "valid_consecutive_pairs": 1485,
+          "clipped_pair_fraction": 0.08821548821548822,
+          "mean_total_cost": 1.3145963783991597,
+          "mean_teacher_component": 1.3062867315511912,
+          "mean_residual_component": 0.0030748084293346152,
+          "mean_cross_component": 0.005234838418635742
+        },
+        "sand+mud+rocks": {
+          "valid_consecutive_pairs": 1475,
+          "clipped_pair_fraction": 0.12338983050847457,
+          "mean_total_cost": 1.5765468957135398,
+          "mean_teacher_component": 1.5667579165220753,
+          "mean_residual_component": 0.0037683348606152287,
+          "mean_cross_component": 0.00602064433084707
+        }
+      }
+    }
+  },
+  "interpretation": "Exact squared-increment decomposition on observed evaluation trajectories after native clipping. First steps and reset boundaries are excluded. Teacher inputs would change if the residual were removed, so this does not measure that counterfactual policy or establish a causal reward-weight effect."
+}

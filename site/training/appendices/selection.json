@@ -1,0 +1,45 @@
+{
+  "comparison_completed": true,
+  "stable_target_policy_demonstrated": false,
+  "checkpoint_promoted": false,
+  "candidate": null,
+  "candidates": {
+    "scheduled": {
+      "checkpoint": "STUDY/training/scheduled/phase-3/training/checkpoint.pt",
+      "checkpoint_sha256": "5b824c26f88c31581fd93fcc48d80e59e501fdfa30687de55d422ce016527172"
+    },
+    "target": {
+      "checkpoint": "STUDY/training/target/phase-3/training/checkpoint.pt",
+      "checkpoint_sha256": "9b9192f19a4529bfed7dd29a25581ddf0b001244d1c636b4b98457a0b0b28d29"
+    }
+  },
+  "retained_research_baseline": "WORKSPACE/outputs/terrain-adaptation-20260919/refinement/baseline/training/checkpoint.pt",
+  "retained_research_baseline_sha256": "a06454552ec5a8c0c94cab308f4c5e4ba271b328c62f7c64d2c5dc70a26d2d02",
+  "reason": "Neither final candidate passed the prospectively specified target-depth usefulness gate.",
+  "acceptance": {
+    "scheduled": {
+      "beats_start_20pct": false,
+      "no_ground_failures": true,
+      "soil_tracking_retained": false,
+      "soil_contact_25pct": true,
+      "soil_contact_qualified_completions": false
+    },
+    "target": {
+      "beats_start_20pct": false,
+      "no_ground_failures": true,
+      "soil_tracking_retained": false,
+      "soil_contact_25pct": true,
+      "soil_contact_qualified_completions": false
+    }
+  },
+  "soil_task_failures": {
+    "start": 56,
+    "scheduled": 53,
+    "target": 54
+  },
+  "seed41_validation": {
+    "run": false,
+    "reason": "Conditional follow-up: no primary candidate qualified."
+  },
+  "reserved_motions_used": false
+}

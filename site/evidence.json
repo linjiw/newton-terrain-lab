@@ -310,5 +310,18 @@
   "discarded_pilot": {
     "note": "A random level-1 pilot completed finite frames but its launcher session ended with SIGTERM (143) without a launcher receipt. It is not used in the curated videos. Controlled evaluation was rerun successfully.",
     "finite_frames": 500
+  },
+  "latest_training_report": {
+    "report_date": "2026-09-21",
+    "study_date": "2026-09-20",
+    "url": "training/",
+    "summary": "training/summary.json",
+    "soil_task_failures": {
+      "start": 56,
+      "scheduled": 53,
+      "target": 54
+    },
+    "checkpoint_promoted": false,
+    "note": "Existing native_runs and media describe the separate archived frozen-teacher showcase."
   }
 }

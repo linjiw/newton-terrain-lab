@@ -1,0 +1,35 @@
+{
+  "visualize": false,
+  "course": "STUDY/training/scheduled/eval-indoor_00792/course.json",
+  "checkpoint": "STUDY/training/scheduled/phase-3/training/checkpoint.pt",
+  "output": "STUDY/training/scheduled/eval-indoor_00792/run",
+  "seed": 23,
+  "initial_level": 1,
+  "voxel_size": 0.02,
+  "steps": 500,
+  "selective_reset_at": -1,
+  "num_envs": 4,
+  "curriculum_enabled": false,
+  "reanchor_motion": true,
+  "material_root_rmse_limit": 0.2,
+  "full_precision": true,
+  "soil_firmness_level": null,
+  "soil_firmness_profile": "yield8",
+  "soil_depth_m": 0.14,
+  "terrain_families": [
+    "ground",
+    "sand",
+    "mud",
+    "sand+mud+rocks"
+  ],
+  "initial_levels": [
+    0,
+    1,
+    1,
+    3
+  ],
+  "placement_lookahead_s": 2,
+  "placement_objective": "soil",
+  "reference_speed": 1.0,
+  "audit_contacts": true
+}

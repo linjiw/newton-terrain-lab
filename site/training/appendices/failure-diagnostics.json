@@ -1,0 +1,155 @@
+{
+  "runs": {
+    "start": {
+      "ground": {
+        "count": 0,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 0,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": null,
+        "median_yaw_error_deg": null,
+        "median_reference_tilt_deg": null,
+        "median_episode_age_s": null
+      },
+      "sand": {
+        "count": 20,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 20,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": 45.22978759893853,
+        "median_yaw_error_deg": 15.076202276661922,
+        "median_reference_tilt_deg": 7.016528469958335,
+        "median_episode_age_s": 1.3399999737739563
+      },
+      "mud": {
+        "count": 15,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 14,
+          "tile_boundary": 1
+        },
+        "median_body_tilt_deg": 46.268135154678674,
+        "median_yaw_error_deg": 12.341932410385954,
+        "median_reference_tilt_deg": 5.415151985791352,
+        "median_episode_age_s": 1.5399999618530273
+      },
+      "sand+mud+rocks": {
+        "count": 21,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 21,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": 43.6847868558506,
+        "median_yaw_error_deg": 15.82493871253612,
+        "median_reference_tilt_deg": 4.233459676826977,
+        "median_episode_age_s": 1.2400000095367432
+      }
+    },
+    "scheduled": {
+      "ground": {
+        "count": 0,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 0,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": null,
+        "median_yaw_error_deg": null,
+        "median_reference_tilt_deg": null,
+        "median_episode_age_s": null
+      },
+      "sand": {
+        "count": 20,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 20,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": 46.57268816712766,
+        "median_yaw_error_deg": 7.910690945762918,
+        "median_reference_tilt_deg": 6.999575940438363,
+        "median_episode_age_s": 1.3199999332427979
+      },
+      "mud": {
+        "count": 13,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 13,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": 45.828158274008544,
+        "median_yaw_error_deg": 9.1592836769871,
+        "median_reference_tilt_deg": 6.257082510908967,
+        "median_episode_age_s": 1.4800000190734863
+      },
+      "sand+mud+rocks": {
+        "count": 20,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 20,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": 46.30598635551159,
+        "median_yaw_error_deg": 11.906409666828322,
+        "median_reference_tilt_deg": 6.011936989756866,
+        "median_episode_age_s": 1.25
+      }
+    },
+    "target": {
+      "ground": {
+        "count": 0,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 0,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": null,
+        "median_yaw_error_deg": null,
+        "median_reference_tilt_deg": null,
+        "median_episode_age_s": null
+      },
+      "sand": {
+        "count": 21,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 21,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": 42.088021816590434,
+        "median_yaw_error_deg": 12.535774032804563,
+        "median_reference_tilt_deg": 7.105835114346956,
+        "median_episode_age_s": 1.3399999141693115
+      },
+      "mud": {
+        "count": 11,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 11,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": 45.66582858309943,
+        "median_yaw_error_deg": 21.641129951199826,
+        "median_reference_tilt_deg": 3.4400849665189828,
+        "median_episode_age_s": 1.4399999380111694
+      },
+      "sand+mud+rocks": {
+        "count": 22,
+        "term_counts": {
+          "anchor_pos": 0,
+          "anchor_ori_full": 22,
+          "tile_boundary": 0
+        },
+        "median_body_tilt_deg": 42.620112335954644,
+        "median_yaw_error_deg": 11.565180246083656,
+        "median_reference_tilt_deg": 5.901960698835906,
+        "median_episode_age_s": 1.1100000143051147
+      }
+    }
+  },
+  "interpretation": "Measured failure-frame diagnostics. Term counts can overlap. Tilt is relative to world vertical; yaw is reference error. This does not establish whether a failed state could recover under different training or termination rules."
+}

@@ -1,0 +1,32 @@
+{
+  "native": {
+    "executable": "NATIVE/.venv_isaaclab/bin/python",
+    "python": "3.11.16",
+    "packages": {
+      "torch": "2.7.0+cu128",
+      "numpy": "1.26.4",
+      "warp-lang": "1.16.0",
+      "newton": null,
+      "mujoco": "3.12.0",
+      "joblib": "1.5.3",
+      "transformers": "4.57.6",
+      "trl": "0.28.0"
+    }
+  },
+  "worker": {
+    "executable": "WORKSPACE/.venv-teacher/bin/python",
+    "python": "3.11.16",
+    "packages": {
+      "torch": null,
+      "numpy": "2.4.6",
+      "warp-lang": "1.17.0",
+      "newton": "1.6.0",
+      "mujoco": "3.12.0",
+      "joblib": "1.6.0",
+      "transformers": null,
+      "trl": null
+    }
+  },
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "native_git_head": "2a3cfb476229fd3fd96761b5b9839a835aae1308"
+}

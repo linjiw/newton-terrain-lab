@@ -1,0 +1,8 @@
+{
+  "train_count": 84,
+  "reserved_count": 20,
+  "split_disjoint": true,
+  "reserved_used": false,
+  "train_sha256": "06aa8751a4765bd7173d017823ec9126167e46526f6c597e85d14f2235562da1",
+  "reserved_sha256": "7b66853216c17ff8306fad8984a1bf0ff85c411ca2b9901cbf5c00056a3d5094"
+}

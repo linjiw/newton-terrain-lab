@@ -1,0 +1,11 @@
+# Prospective evaluation amendment before full policy training
+
+The original methods required retaining 95% of the starting policy's aggregate soil-contact time. That baseline failed repeatedly while nearly continuously contacting soil. The finite soil patches are surrounded by rigid aprons, and the reference motions can legitimately leave a patch. Aggregate contact retention can therefore reject a successful tracked crossing simply because it no longer resets repeatedly inside soil.
+
+Before either full training arm is launched, replace that single contact-retention gate with both: (1) at least one full-reference completion with at least one second of measured material contact in each soil family, and (2) at least 25% aggregate material exposure in each soil family (7.5 of 30 seconds). Keep the original 95% check in the report as a diagnostic. Full completions may include rigid-apron travel; this task is tracking while crossing a finite soil patch, not continuous locomotion on an infinite material field.
+
+For policy usefulness, either trained arm must have at least 20% fewer soil task failures than the starting policy, zero ground task failures, no soil-family root/planar-velocity RMSE regression versus start, and both new contact/completion criteria. If both pass, choose fewer soil failures, then lower summed soil root RMSE as the tie-break. A claim that the depth schedule helps beyond equal-budget training additionally requires at least 20% fewer failures than the deep-only control. A successful control can thus be retained without claiming curriculum benefit.
+
+Freeze a provisionally useful candidate before the already planned seed-41 comparison against start. Require no seed-41 failure-count regression, at least 20% fewer failures pooled across both seeds, zero ground failures, pooled tracking retention, and the new contact/completion criteria on each seed separately. Neither this check nor easier-practice admission establishes held-out or independent-training-seed generalization.
+
+This amendment supersedes only the final selection/contact clauses in METHOD.md and TRAINING_METHOD.md. It does not change the pilot gate, training budget, model, rewards, physical settings or failure definitions. The original documents and their hashes remain preserved.

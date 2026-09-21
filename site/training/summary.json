@@ -1,0 +1,174 @@
+{
+  "report_date": "2026-09-21",
+  "study_date": "2026-09-20",
+  "study_status": "completed",
+  "checkpoint_promoted": false,
+  "terrain_ready": false,
+  "failures": {
+    "start": 56,
+    "scheduled": 53,
+    "target": 54
+  },
+  "aggregate": {
+    "start": {
+      "ground": {
+        "failure_count": 0,
+        "contact_s": 0.0,
+        "first_segment_s": 6.3133333333333335,
+        "root_rmse_m": 0.17917775269623487,
+        "planar_velocity_rmse_m_s": 0.1855760555080108,
+        "joint_rmse_rad": 0.09916315870555478,
+        "contact_root_rmse_m": null,
+        "contact_planar_velocity_rmse_m_s": null,
+        "joint_torque_peak_max": 68.06802368164062
+      },
+      "sand": {
+        "failure_count": 20,
+        "contact_s": 29.865,
+        "first_segment_s": 1.62,
+        "root_rmse_m": 0.3590111491639914,
+        "planar_velocity_rmse_m_s": 0.694239679289209,
+        "joint_rmse_rad": 0.32576172758196387,
+        "contact_root_rmse_m": 0.3588733135115758,
+        "contact_planar_velocity_rmse_m_s": 0.6949965839252524,
+        "joint_torque_peak_max": 139.0
+      },
+      "mud": {
+        "failure_count": 15,
+        "contact_s": 29.519999999999996,
+        "first_segment_s": 2.066666666666667,
+        "root_rmse_m": 0.4476361725591396,
+        "planar_velocity_rmse_m_s": 0.6151730925921138,
+        "joint_rmse_rad": 0.3299146759289253,
+        "contact_root_rmse_m": 0.4480358368852911,
+        "contact_planar_velocity_rmse_m_s": 0.6077214815660849,
+        "joint_torque_peak_max": 139.0
+      },
+      "sand+mud+rocks": {
+        "failure_count": 21,
+        "contact_s": 29.86,
+        "first_segment_s": 1.2733333333333334,
+        "root_rmse_m": 0.3121830117505907,
+        "planar_velocity_rmse_m_s": 0.5769483750743266,
+        "joint_rmse_rad": 0.3167579063597783,
+        "contact_root_rmse_m": 0.3126288736906662,
+        "contact_planar_velocity_rmse_m_s": 0.5776609119665076,
+        "joint_torque_peak_max": 139.0
+      }
+    },
+    "scheduled": {
+      "ground": {
+        "failure_count": 0,
+        "contact_s": 0.0,
+        "first_segment_s": 6.3133333333333335,
+        "root_rmse_m": 0.18298725077964728,
+        "planar_velocity_rmse_m_s": 0.17932399288146258,
+        "joint_rmse_rad": 0.11119750858385226,
+        "contact_root_rmse_m": null,
+        "contact_planar_velocity_rmse_m_s": null,
+        "joint_torque_peak_max": 69.79232788085938
+      },
+      "sand": {
+        "failure_count": 20,
+        "contact_s": 29.599999999999994,
+        "first_segment_s": 1.6733333333333336,
+        "root_rmse_m": 0.3408923542066585,
+        "planar_velocity_rmse_m_s": 0.6652724937224169,
+        "joint_rmse_rad": 0.3158784242455486,
+        "contact_root_rmse_m": 0.34040036022241943,
+        "contact_planar_velocity_rmse_m_s": 0.6629374079233141,
+        "joint_torque_peak_max": 139.0
+      },
+      "mud": {
+        "failure_count": 13,
+        "contact_s": 29.854999999999997,
+        "first_segment_s": 2.733333333333334,
+        "root_rmse_m": 0.6191599867787678,
+        "planar_velocity_rmse_m_s": 0.676990853185157,
+        "joint_rmse_rad": 0.303584508267451,
+        "contact_root_rmse_m": 0.6195161104654159,
+        "contact_planar_velocity_rmse_m_s": 0.6784765262216645,
+        "joint_torque_peak_max": 139.0
+      },
+      "sand+mud+rocks": {
+        "failure_count": 20,
+        "contact_s": 29.869999999999994,
+        "first_segment_s": 1.5,
+        "root_rmse_m": 0.3029149274070774,
+        "planar_velocity_rmse_m_s": 0.6343653889155841,
+        "joint_rmse_rad": 0.3169061290433341,
+        "contact_root_rmse_m": 0.3035586031630049,
+        "contact_planar_velocity_rmse_m_s": 0.6356635171079352,
+        "joint_torque_peak_max": 139.0
+      }
+    },
+    "target": {
+      "ground": {
+        "failure_count": 0,
+        "contact_s": 0.0,
+        "first_segment_s": 6.3133333333333335,
+        "root_rmse_m": 0.221538898868757,
+        "planar_velocity_rmse_m_s": 0.19198954931554646,
+        "joint_rmse_rad": 0.10761840294691985,
+        "contact_root_rmse_m": null,
+        "contact_planar_velocity_rmse_m_s": null,
+        "joint_torque_peak_max": 71.77667999267578
+      },
+      "sand": {
+        "failure_count": 21,
+        "contact_s": 29.729999999999997,
+        "first_segment_s": 1.7466666666666668,
+        "root_rmse_m": 0.3500882575769206,
+        "planar_velocity_rmse_m_s": 0.6918455856837715,
+        "joint_rmse_rad": 0.3415135643345239,
+        "contact_root_rmse_m": 0.34986041081663205,
+        "contact_planar_velocity_rmse_m_s": 0.6932978639238667,
+        "joint_torque_peak_max": 139.0
+      },
+      "mud": {
+        "failure_count": 11,
+        "contact_s": 24.019999999999996,
+        "first_segment_s": 2.3266666666666667,
+        "root_rmse_m": 0.5973266375295134,
+        "planar_velocity_rmse_m_s": 0.6200546873007474,
+        "joint_rmse_rad": 0.30099909535545943,
+        "contact_root_rmse_m": 0.4398101468312458,
+        "contact_planar_velocity_rmse_m_s": 0.6679908326863515,
+        "joint_torque_peak_max": 139.0
+      },
+      "sand+mud+rocks": {
+        "failure_count": 22,
+        "contact_s": 29.869999999999997,
+        "first_segment_s": 1.2,
+        "root_rmse_m": 0.3002878227501552,
+        "planar_velocity_rmse_m_s": 0.6083837557983798,
+        "joint_rmse_rad": 0.30590078350817523,
+        "contact_root_rmse_m": 0.3009401293472342,
+        "contact_planar_velocity_rmse_m_s": 0.6096283124495742,
+        "joint_torque_peak_max": 139.0
+      }
+    }
+  },
+  "acceptance": {
+    "scheduled": {
+      "beats_start_20pct": false,
+      "no_ground_failures": true,
+      "soil_tracking_retained": false,
+      "soil_contact_25pct": true,
+      "soil_contact_qualified_completions": false
+    },
+    "target": {
+      "beats_start_20pct": false,
+      "no_ground_failures": true,
+      "soil_tracking_retained": false,
+      "soil_contact_25pct": true,
+      "soil_contact_qualified_completions": false
+    }
+  },
+  "retained_rollouts_per_arm": 256,
+  "retained_transitions_per_arm": 24576,
+  "evaluation_seconds_per_family": 30,
+  "evaluation_seed": 23,
+  "evaluation_clips": 3,
+  "starting_checkpoint_sha256": "a06454552ec5a8c0c94cab308f4c5e4ba271b328c62f7c64d2c5dc70a26d2d02"
+}

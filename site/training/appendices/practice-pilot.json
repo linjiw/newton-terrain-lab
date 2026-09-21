@@ -1,0 +1,322 @@
+{
+  "plan": {
+    "depths": [
+      0.02,
+      0.14
+    ],
+    "clips": [
+      {
+        "key": "indoor_00792",
+        "speed_m_s": 0.8215914964675903,
+        "quantile": 0.25,
+        "path": "WORKSPACE/outputs/terrain-adaptation-20260919/motion-panel/indoor_00792.pkl",
+        "sha256": "8a74e4f8b282912f6008e7ff309ba19dcb1453760c876a3639b256f2045510d8"
+      },
+      {
+        "key": "indoor_00509",
+        "speed_m_s": 1.0553326606750488,
+        "quantile": 0.5,
+        "path": "WORKSPACE/outputs/terrain-adaptation-20260919/motion-panel/indoor_00509.pkl",
+        "sha256": "a16f356d55d9c8ff1fb0673c80c99c059515da80e2aeb1a523c0dc3530cf5ade"
+      },
+      {
+        "key": "indoor_00674",
+        "speed_m_s": 1.3117538690567017,
+        "quantile": 0.75,
+        "path": "WORKSPACE/outputs/terrain-adaptation-20260919/motion-panel/indoor_00674.pkl",
+        "sha256": "141316e0d5b6e69acc623ae81dfe8bb738caabdc1883fb2930fcee48eea590c5"
+      }
+    ],
+    "checkpoint": "WORKSPACE/outputs/terrain-adaptation-20260919/refinement/baseline/training/checkpoint.pt",
+    "checkpoint_sha256": "a06454552ec5a8c0c94cab308f4c5e4ba271b328c62f7c64d2c5dc70a26d2d02",
+    "seed": 23,
+    "voxel_size": 0.02,
+    "steps": 500,
+    "reference_speed": 1.0,
+    "reward_variant": "baseline",
+    "residual_bound": 0.25,
+    "reused_control": "STUDY/pilot",
+    "reuse_note": "The three 14 cm evaluations are symlinks to the same completed control, not additional trials."
+  },
+  "aggregate": {
+    "0.02": {
+      "ground": {
+        "failure_count": 0,
+        "contact_s": 0.0,
+        "first_segment_s": 6.3133333333333335,
+        "root_rmse_m": 0.1738316489842668,
+        "planar_velocity_rmse_m_s": 0.18536703878652172,
+        "joint_rmse_rad": 0.09948118998510848,
+        "contact_root_rmse_m": null,
+        "contact_planar_velocity_rmse_m_s": null,
+        "joint_torque_peak_max": 68.49297332763672
+      },
+      "sand": {
+        "failure_count": 3,
+        "contact_s": 17.08,
+        "first_segment_s": 5.3066666666666675,
+        "root_rmse_m": 0.24910047488632636,
+        "planar_velocity_rmse_m_s": 0.23849995572357952,
+        "joint_rmse_rad": 0.11301592612569548,
+        "contact_root_rmse_m": 0.22372038301835268,
+        "contact_planar_velocity_rmse_m_s": 0.24631851997588733,
+        "joint_torque_peak_max": 95.7488021850586
+      },
+      "mud": {
+        "failure_count": 2,
+        "contact_s": 14.604999999999999,
+        "first_segment_s": 5.346666666666667,
+        "root_rmse_m": 0.21447925075240556,
+        "planar_velocity_rmse_m_s": 0.212271129756924,
+        "joint_rmse_rad": 0.10599738613405826,
+        "contact_root_rmse_m": 0.15949240446117796,
+        "contact_planar_velocity_rmse_m_s": 0.21439317989716689,
+        "joint_torque_peak_max": 82.24504852294922
+      },
+      "sand+mud+rocks": {
+        "failure_count": 5,
+        "contact_s": 16.2,
+        "first_segment_s": 5.246666666666667,
+        "root_rmse_m": 0.26291635214291315,
+        "planar_velocity_rmse_m_s": 0.2482170116308099,
+        "joint_rmse_rad": 0.14761096814995683,
+        "contact_root_rmse_m": 0.1731609232821275,
+        "contact_planar_velocity_rmse_m_s": 0.26135933889773183,
+        "joint_torque_peak_max": 139.0
+      }
+    },
+    "0.14": {
+      "ground": {
+        "failure_count": 0,
+        "contact_s": 0.0,
+        "first_segment_s": 6.3133333333333335,
+        "root_rmse_m": 0.17917775269623487,
+        "planar_velocity_rmse_m_s": 0.1855760555080108,
+        "joint_rmse_rad": 0.09916315870555478,
+        "contact_root_rmse_m": null,
+        "contact_planar_velocity_rmse_m_s": null,
+        "joint_torque_peak_max": 68.06802368164062
+      },
+      "sand": {
+        "failure_count": 20,
+        "contact_s": 29.865,
+        "first_segment_s": 1.62,
+        "root_rmse_m": 0.3590111491639914,
+        "planar_velocity_rmse_m_s": 0.694239679289209,
+        "joint_rmse_rad": 0.32576172758196387,
+        "contact_root_rmse_m": 0.3588733135115758,
+        "contact_planar_velocity_rmse_m_s": 0.6949965839252524,
+        "joint_torque_peak_max": 139.0
+      },
+      "mud": {
+        "failure_count": 15,
+        "contact_s": 29.519999999999996,
+        "first_segment_s": 2.066666666666667,
+        "root_rmse_m": 0.4476361725591396,
+        "planar_velocity_rmse_m_s": 0.6151730925921138,
+        "joint_rmse_rad": 0.3299146759289253,
+        "contact_root_rmse_m": 0.4480358368852911,
+        "contact_planar_velocity_rmse_m_s": 0.6077214815660849,
+        "joint_torque_peak_max": 139.0
+      },
+      "sand+mud+rocks": {
+        "failure_count": 21,
+        "contact_s": 29.86,
+        "first_segment_s": 1.2733333333333334,
+        "root_rmse_m": 0.3121830117505907,
+        "planar_velocity_rmse_m_s": 0.5769483750743266,
+        "joint_rmse_rad": 0.3167579063597783,
+        "contact_root_rmse_m": 0.3126288736906662,
+        "contact_planar_velocity_rmse_m_s": 0.5776609119665076,
+        "joint_torque_peak_max": 139.0
+      }
+    }
+  },
+  "soil_task_failures": {
+    "0.02": 10,
+    "0.14": 56
+  },
+  "admission": {
+    "0.02": {
+      "soil_failures_halved": true,
+      "no_ground_failures": true,
+      "soil_completions": true,
+      "material_contact": true,
+      "tracking_retained": true
+    }
+  },
+  "selected_practice_depth": 0.02,
+  "completions": {
+    "depth-0.02-indoor_00792": {
+      "ground": {
+        "reference_tail_completions": 2,
+        "full_reference_completions": 2,
+        "longest_episode_observed_s": 4.980000019073486
+      },
+      "sand": {
+        "reference_tail_completions": 2,
+        "full_reference_completions": 2,
+        "longest_episode_observed_s": 4.980000019073486
+      },
+      "mud": {
+        "reference_tail_completions": 2,
+        "full_reference_completions": 2,
+        "longest_episode_observed_s": 4.980000019073486
+      },
+      "sand+mud+rocks": {
+        "reference_tail_completions": 1,
+        "full_reference_completions": 1,
+        "longest_episode_observed_s": 4.980000019073486
+      }
+    },
+    "depth-0.02-indoor_00509": {
+      "ground": {
+        "reference_tail_completions": 1,
+        "full_reference_completions": 1,
+        "longest_episode_observed_s": 7.980000019073486
+      },
+      "sand": {
+        "reference_tail_completions": 1,
+        "full_reference_completions": 1,
+        "longest_episode_observed_s": 7.980000019073486
+      },
+      "mud": {
+        "reference_tail_completions": 1,
+        "full_reference_completions": 1,
+        "longest_episode_observed_s": 7.980000019073486
+      },
+      "sand+mud+rocks": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 5.980000019073486
+      }
+    },
+    "depth-0.02-indoor_00674": {
+      "ground": {
+        "reference_tail_completions": 1,
+        "full_reference_completions": 1,
+        "longest_episode_observed_s": 5.980000019073486
+      },
+      "sand": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 3.0
+      },
+      "mud": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 4.839999675750732
+      },
+      "sand+mud+rocks": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 4.839999675750732
+      }
+    },
+    "depth-0.14-indoor_00792": {
+      "ground": {
+        "reference_tail_completions": 2,
+        "full_reference_completions": 2,
+        "longest_episode_observed_s": 4.980000019073486
+      },
+      "sand": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 2.359999895095825
+      },
+      "mud": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 4.299999713897705
+      },
+      "sand+mud+rocks": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 3.5
+      }
+    },
+    "depth-0.14-indoor_00509": {
+      "ground": {
+        "reference_tail_completions": 1,
+        "full_reference_completions": 1,
+        "longest_episode_observed_s": 7.980000019073486
+      },
+      "sand": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 1.5199999809265137
+      },
+      "mud": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 2.679999828338623
+      },
+      "sand+mud+rocks": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 1.9199999570846558
+      }
+    },
+    "depth-0.14-indoor_00674": {
+      "ground": {
+        "reference_tail_completions": 1,
+        "full_reference_completions": 1,
+        "longest_episode_observed_s": 5.980000019073486
+      },
+      "sand": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 1.3799999952316284
+      },
+      "mud": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 1.459999918937683
+      },
+      "sand+mud+rocks": {
+        "reference_tail_completions": 0,
+        "full_reference_completions": 0,
+        "longest_episode_observed_s": 1.3399999141693115
+      }
+    }
+  },
+  "completions_with_1s_material_contact": {
+    "depth-0.02-indoor_00792": {
+      "ground": 0,
+      "sand": 2,
+      "mud": 2,
+      "sand+mud+rocks": 1
+    },
+    "depth-0.02-indoor_00509": {
+      "ground": 0,
+      "sand": 1,
+      "mud": 1,
+      "sand+mud+rocks": 0
+    },
+    "depth-0.02-indoor_00674": {
+      "ground": 0,
+      "sand": 0,
+      "mud": 0,
+      "sand+mud+rocks": 0
+    },
+    "depth-0.14-indoor_00792": {
+      "ground": 0,
+      "sand": 0,
+      "mud": 0,
+      "sand+mud+rocks": 0
+    },
+    "depth-0.14-indoor_00509": {
+      "ground": 0,
+      "sand": 0,
+      "mud": 0,
+      "sand+mud+rocks": 0
+    },
+    "depth-0.14-indoor_00674": {
+      "ground": 0,
+      "sand": 0,
+      "mud": 0,
+      "sand+mud+rocks": 0
+    }
+  },
+  "interpretation": "Practice admission only; rigid substrate limits sink. Full clips may include rigid apron traversal."
+}

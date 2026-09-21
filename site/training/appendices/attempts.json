@@ -1,0 +1,40 @@
+{
+  "retained_per_arm": {
+    "rollouts": 256,
+    "transitions": 24576,
+    "optimizer_steps": 1024
+  },
+  "scheduled_discarded_attempts": [
+    {
+      "attempt": 0,
+      "outcome": "SIGTERM",
+      "launcher_exit_code": 143,
+      "cause": "unknown",
+      "log_folder": "STUDY/training/scheduled/interrupted-phase-1-attempt-0",
+      "discarded_transitions": 5448,
+      "discarded_optimizer_steps": 224,
+      "weights_carried_forward": false
+    },
+    {
+      "attempt": 1,
+      "outcome": "SIGTERM",
+      "launcher_exit_code": 143,
+      "cause": "unknown",
+      "log_folder": "STUDY/training/scheduled/interrupted-phase-1-attempt-1",
+      "discarded_transitions": 3468,
+      "discarded_optimizer_steps": 144,
+      "weights_carried_forward": false
+    }
+  ],
+  "scheduled_total_executed_training_transitions": 33492,
+  "scheduled_total_executed_optimizer_steps": 1392,
+  "target_total_executed_training_transitions": 24576,
+  "target_total_executed_optimizer_steps": 1024,
+  "smoke": {
+    "rollouts": 8,
+    "transitions": 768,
+    "optimizer_steps": 32,
+    "used_to_initialize_comparison": false
+  },
+  "interpretation": "Retained learning budgets match; physical compute budgets do not. Interrupted phase weights were discarded. Both archived prefixes exactly match the final serialized recovery. Evaluations and probes are separate from training counts."
+}

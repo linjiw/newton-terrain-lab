@@ -1,0 +1,233 @@
+{
+  "precision": {
+    "cuda_matmul_allow_tf32": false,
+    "cudnn_allow_tf32": false
+  },
+  "rewards": {
+    "tracking_anchor_pos": {
+      "func": "dry_rewards.tracking_anchor_pos_terrain",
+      "params": {
+        "command_name": "motion",
+        "std": 0.3,
+        "std_z": 0.45
+      },
+      "weight": 0.5
+    },
+    "tracking_anchor_ori": {
+      "func": "gear_sonic.envs.manager_env.mdp:tracking_anchor_ori_error",
+      "params": {
+        "command_name": "motion",
+        "std": 0.4
+      },
+      "weight": 0.5
+    },
+    "tracking_relative_body_pos": {
+      "func": "gear_sonic.envs.manager_env.mdp:tracking_relative_body_pos_error",
+      "params": {
+        "command_name": "motion",
+        "std": 0.3
+      },
+      "weight": 1.0
+    },
+    "tracking_relative_body_ori": {
+      "func": "gear_sonic.envs.manager_env.mdp:tracking_relative_body_ori_error",
+      "params": {
+        "command_name": "motion",
+        "std": 0.4
+      },
+      "weight": 1.0
+    },
+    "tracking_body_linvel": {
+      "func": "gear_sonic.envs.manager_env.mdp:tracking_body_linvel_error",
+      "params": {
+        "command_name": "motion",
+        "std": 1.5
+      },
+      "weight": 0.75
+    },
+    "tracking_body_angvel": {
+      "func": "gear_sonic.envs.manager_env.mdp:tracking_body_angvel_error",
+      "params": {
+        "command_name": "motion",
+        "std": 3.14
+      },
+      "weight": 0.75
+    },
+    "action_rate_l2": {
+      "func": "gear_sonic.envs.manager_env.mdp:action_rate_l2",
+      "params": {},
+      "weight": -0.1
+    },
+    "joint_limit": {
+      "func": "gear_sonic.envs.manager_env.mdp:joint_pos_limits",
+      "params": {
+        "asset_cfg": "SceneEntityCfg(name='robot', joint_names=['.*'], joint_ids=slice(None, None, None), fixed_tendon_names=None, fixed_tendon_ids=slice(None, None, None), body_names=None, body_ids=slice(None, None, None), object_collection_names=None, object_collection_ids=slice(None, None, None), preserve_order=False)"
+      },
+      "weight": -10.0
+    },
+    "undesired_contacts": {
+      "func": "dry_rewards.undesired_contacts",
+      "params": {
+        "sensor_cfg": "SceneEntityCfg(name='contact_forces', joint_names=None, joint_ids=slice(None, None, None), fixed_tendon_names=None, fixed_tendon_ids=slice(None, None, None), body_names=['^(?!(?:left|right)_ankle_(?:pitch|roll)_link$)(?!(?:left|right)_(?:wrist_yaw|elbow)_link$).+$'], body_ids=slice(None, None, None), object_collection_names=None, object_collection_ids=slice(None, None, None), preserve_order=False)",
+        "threshold": 5.0
+      },
+      "weight": -0.1
+    },
+    "anti_shake_ang_vel": {
+      "func": "gear_sonic.envs.manager_env.mdp:anti_shake_ang_vel_l2",
+      "params": {
+        "command_name": "motion",
+        "threshold": 1.5,
+        "body_names": [
+          "left_wrist_yaw_link",
+          "right_wrist_yaw_link",
+          "head_link"
+        ]
+      },
+      "weight": -0.005
+    },
+    "tracking_vr_5point_local": {
+      "func": "gear_sonic.envs.manager_env.mdp:tracking_local_vr_5point_error",
+      "params": {
+        "command_name": "motion",
+        "std": 0.1
+      },
+      "weight": 2.0
+    },
+    "feet_acc": {
+      "func": "gear_sonic.envs.manager_env.mdp:joint_acc_l2",
+      "params": {
+        "asset_cfg": "SceneEntityCfg(name='robot', joint_names=['.*ankle.*'], joint_ids=slice(None, None, None), fixed_tendon_names=None, fixed_tendon_ids=slice(None, None, None), body_names=None, body_ids=slice(None, None, None), object_collection_names=None, object_collection_ids=slice(None, None, None), preserve_order=False)"
+      },
+      "weight": -2.5e-06
+    }
+  },
+  "terminations": {
+    "time_out": {
+      "func": "gear_sonic.envs.manager_env.mdp:tracking_time_out",
+      "params": {
+        "command_name": "motion"
+      },
+      "time_out": true
+    },
+    "anchor_pos": {
+      "func": "dry_terminations.recovery_height",
+      "params": {
+        "command_name": "motion",
+        "threshold": 0.3,
+        "hold_s": 0.3,
+        "grace_s": 0.2,
+        "hard_threshold": 0.6
+      },
+      "time_out": false
+    },
+    "anchor_ori_full": {
+      "func": "gear_sonic.envs.manager_env.mdp:exceeded_anchor_ori",
+      "params": {
+        "asset_cfg": "SceneEntityCfg(name='robot', joint_names=None, joint_ids=slice(None, None, None), fixed_tendon_names=None, fixed_tendon_ids=slice(None, None, None), body_names=None, body_ids=slice(None, None, None), object_collection_names=None, object_collection_ids=slice(None, None, None), preserve_order=False)",
+        "command_name": "motion",
+        "threshold": 0.64
+      },
+      "time_out": false
+    },
+    "tile_boundary": {
+      "func": "dry_terminations.tile_boundary",
+      "params": {},
+      "time_out": false
+    },
+    "episode_time_limit": {
+      "func": "dry_terminations.episode_time_limit",
+      "params": {},
+      "time_out": true
+    }
+  },
+  "events": {},
+  "motion_reset": {
+    "pose_range": {
+      "x": [
+        -0.02,
+        0.02
+      ],
+      "y": [
+        -0.02,
+        0.02
+      ],
+      "z": [
+        0.0,
+        0.0
+      ],
+      "roll": [
+        -0.03,
+        0.03
+      ],
+      "pitch": [
+        -0.03,
+        0.03
+      ],
+      "yaw": [
+        -0.1,
+        0.1
+      ]
+    },
+    "velocity_range": {
+      "x": [
+        -0.05,
+        0.05
+      ],
+      "y": [
+        -0.05,
+        0.05
+      ],
+      "z": [
+        0.0,
+        0.0
+      ],
+      "roll": [
+        0.0,
+        0.0
+      ],
+      "pitch": [
+        0.0,
+        0.0
+      ],
+      "yaw": [
+        0.0,
+        0.0
+      ]
+    },
+    "joint_position_range": [
+      -0.03,
+      0.03
+    ],
+    "joint_velocity_range": [
+      0.0,
+      0.0
+    ]
+  },
+  "practice": {
+    "minimum_reference_remaining_s": 2.0,
+    "initial_levels": [
+      0,
+      1,
+      1,
+      2
+    ],
+    "curriculum_enabled": false,
+    "placement_lookahead_s": 2.0,
+    "terrain_families": [
+      "ground",
+      "sand",
+      "mud",
+      "sand+mud"
+    ],
+    "placement_objective": "soil",
+    "reference_speed": 1.0,
+    "tempo_curriculum": null
+  },
+  "soil_depth": {
+    "depth_m": 0.14,
+    "bed_floor_z": -0.14,
+    "initial_surface_z": 0.0,
+    "schedule": "static for this native process"
+  }
+}

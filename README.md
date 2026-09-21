@@ -8,7 +8,7 @@ The default **167.5 × 167.5 m map** has **256 tiles**, **15 combinations** of g
 
 ![Terrain map and measured four-environment placement](docs/media/dry-map.png)
 
-**Status:** experimental integration with native two/four-environment evaluation, selective resets, live surface reconstruction, and one successful SONIC PPO optimizer update. Sand and mud are demonstration constitutive presets, **not calibrated real soils**. Sustained training and large-batch throughput remain unvalidated. The teacher, robot assets, motion data and external SONIC fork are not bundled.
+**Latest training report (21 September 2026):** [Complete methods, rewards, settings and results](https://linjiw.github.io/newton-terrain-lab/training/). Two matched 256-rollout research runs completed. Original-depth soil failures were 56 at start, 53 after depth-scheduled training and 54 after direct training; both candidates failed tracking/usefulness criteria, and neither was promoted. The report includes the source/configuration provenance of the newer research workspace; this toolkit checkout alone does not reproduce that study. Sand and mud remain **uncalibrated demonstration presets**. Reliable deep-soil tracking and large-batch throughput remain unvalidated. Teacher weights, robot/motion assets and the external SONIC fork are not bundled.
 
 ## Start with map generation
 

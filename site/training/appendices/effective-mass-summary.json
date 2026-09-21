@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "ground": {
+      "samples": 80,
+      "vertical_response_ratio_quantiles": [
+        2.849745342357671,
+        7.852099859883923,
+        10.98498702380813
+      ],
+      "vertical_effective_mass_kg_quantiles": [
+        1.732645168153464,
+        4.774076714809425,
+        6.678872110475343
+      ]
+    },
+    "sand": {
+      "samples": 80,
+      "vertical_response_ratio_quantiles": [
+        2.3254253594877143,
+        7.27477588728712,
+        11.341106598511875
+      ],
+      "vertical_effective_mass_kg_quantiles": [
+        1.4138586185685302,
+        4.423063739470569,
+        6.89539281189522
+      ]
+    },
+    "mud": {
+      "samples": 80,
+      "vertical_response_ratio_quantiles": [
+        2.3630702257756404,
+        7.54995217649741,
+        13.480644338037047
+      ],
+      "vertical_effective_mass_kg_quantiles": [
+        1.4367466972715892,
+        4.5903709233104255,
+        8.196231757526524
+      ]
+    },
+    "sand+mud+rocks": {
+      "samples": 80,
+      "vertical_response_ratio_quantiles": [
+        2.3902766463828704,
+        6.987376942817255,
+        12.017148792949023
+      ],
+      "vertical_effective_mass_kg_quantiles": [
+        1.4532882010007853,
+        4.24832518123289,
+        7.306426466113006
+      ]
+    }
+  },
+  "interpretation": "Compares the isolated-link velocity-unloading approximation with J M^-1 J^T for one hypothetical COM force in the nominal MuJoCo articulation. Omits contact constraints, PD stiffness, simultaneous forces and native PhysX differences. It is not a closed-loop corrected-coupling experiment or proof that this approximation causes failures."
+}

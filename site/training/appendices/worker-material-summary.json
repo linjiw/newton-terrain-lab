@@ -1,0 +1,1202 @@
+{
+  "scheduled/phase-0": {
+    "0": {
+      "steps": 512,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "ground",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 0,
+      "materials": []
+    },
+    "1": {
+      "steps": 816,
+      "soil_depth_m": 0.02,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.02
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 105600,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 105600,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        }
+      ]
+    },
+    "2": {
+      "steps": 512,
+      "soil_depth_m": 0.02,
+      "patch_bounds": [
+        {
+          "material": "mud",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.02
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 105600,
+      "materials": [
+        {
+          "material": "mud",
+          "start": 0,
+          "stop": 105600,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    },
+    "3": {
+      "steps": 84,
+      "soil_depth_m": 0.02,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.02
+          ],
+          "hi": [
+            1.3,
+            1.7,
+            0
+          ]
+        },
+        {
+          "material": "mud",
+          "lo": [
+            1.3,
+            -0.7,
+            -0.02
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 106080,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 52800,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        },
+        {
+          "material": "mud",
+          "start": 52800,
+          "stop": 106080,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    }
+  },
+  "scheduled/phase-1": {
+    "0": {
+      "steps": 920,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "ground",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 0,
+      "materials": []
+    },
+    "1": {
+      "steps": 200,
+      "soil_depth_m": 0.06,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.06
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 316800,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 316800,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        }
+      ]
+    },
+    "2": {
+      "steps": 72,
+      "soil_depth_m": 0.06,
+      "patch_bounds": [
+        {
+          "material": "mud",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.06
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 316800,
+      "materials": [
+        {
+          "material": "mud",
+          "start": 0,
+          "stop": 316800,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    },
+    "3": {
+      "steps": 692,
+      "soil_depth_m": 0.06,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.06
+          ],
+          "hi": [
+            1.3,
+            1.7,
+            0
+          ]
+        },
+        {
+          "material": "mud",
+          "lo": [
+            1.3,
+            -0.7,
+            -0.06
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 318240,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 158400,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        },
+        {
+          "material": "mud",
+          "start": 158400,
+          "stop": 318240,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    }
+  },
+  "scheduled/phase-2": {
+    "0": {
+      "steps": 492,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "ground",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 0,
+      "materials": []
+    },
+    "1": {
+      "steps": 180,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        }
+      ]
+    },
+    "2": {
+      "steps": 136,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "mud",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "mud",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    },
+    "3": {
+      "steps": 8,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            1.3,
+            1.7,
+            0
+          ]
+        },
+        {
+          "material": "mud",
+          "lo": [
+            1.3,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 795600,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 396000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        },
+        {
+          "material": "mud",
+          "start": 396000,
+          "stop": 795600,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    }
+  },
+  "scheduled/phase-3": {
+    "0": {
+      "steps": 224,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "ground",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 0,
+      "materials": []
+    },
+    "1": {
+      "steps": 76,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        }
+      ]
+    },
+    "2": {
+      "steps": 200,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "mud",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "mud",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    },
+    "3": {
+      "steps": 8,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            1.3,
+            1.7,
+            0
+          ]
+        },
+        {
+          "material": "mud",
+          "lo": [
+            1.3,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 795600,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 396000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        },
+        {
+          "material": "mud",
+          "start": 396000,
+          "stop": 795600,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    }
+  },
+  "target/phase-0": {
+    "0": {
+      "steps": 380,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "ground",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 0,
+      "materials": []
+    },
+    "1": {
+      "steps": 200,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        }
+      ]
+    },
+    "2": {
+      "steps": 8,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "mud",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "mud",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    },
+    "3": {
+      "steps": 580,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            1.3,
+            1.7,
+            0
+          ]
+        },
+        {
+          "material": "mud",
+          "lo": [
+            1.3,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 795600,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 396000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        },
+        {
+          "material": "mud",
+          "start": 396000,
+          "stop": 795600,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    }
+  },
+  "target/phase-1": {
+    "0": {
+      "steps": 1168,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "ground",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 0,
+      "materials": []
+    },
+    "1": {
+      "steps": 272,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        }
+      ]
+    },
+    "2": {
+      "steps": 76,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "mud",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "mud",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    },
+    "3": {
+      "steps": 284,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            1.3,
+            1.7,
+            0
+          ]
+        },
+        {
+          "material": "mud",
+          "lo": [
+            1.3,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 795600,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 396000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        },
+        {
+          "material": "mud",
+          "start": 396000,
+          "stop": 795600,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    }
+  },
+  "target/phase-2": {
+    "0": {
+      "steps": 1144,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "ground",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 0,
+      "materials": []
+    },
+    "1": {
+      "steps": 16,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        }
+      ]
+    },
+    "2": {
+      "steps": 212,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "mud",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "mud",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    },
+    "3": {
+      "steps": 348,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            1.3,
+            1.7,
+            0
+          ]
+        },
+        {
+          "material": "mud",
+          "lo": [
+            1.3,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 795600,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 396000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        },
+        {
+          "material": "mud",
+          "start": 396000,
+          "stop": 795600,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    }
+  },
+  "target/phase-3": {
+    "0": {
+      "steps": 580,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "ground",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 0,
+      "materials": []
+    },
+    "1": {
+      "steps": 24,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        }
+      ]
+    },
+    "2": {
+      "steps": 228,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "mud",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 792000,
+      "materials": [
+        {
+          "material": "mud",
+          "start": 0,
+          "stop": 792000,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    },
+    "3": {
+      "steps": 104,
+      "soil_depth_m": 0.14,
+      "patch_bounds": [
+        {
+          "material": "sand",
+          "lo": [
+            0.2,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            1.3,
+            1.7,
+            0
+          ]
+        },
+        {
+          "material": "mud",
+          "lo": [
+            1.3,
+            -0.7,
+            -0.14
+          ],
+          "hi": [
+            2.4000000000000004,
+            1.7,
+            0
+          ]
+        }
+      ],
+      "particles": 795600,
+      "materials": [
+        {
+          "material": "sand",
+          "start": 0,
+          "stop": 396000,
+          "parameters": {
+            "density": 1600.0,
+            "friction": 0.75,
+            "viscosity": 0.0,
+            "yield_stress": 0.0
+          }
+        },
+        {
+          "material": "mud",
+          "start": 396000,
+          "stop": 795600,
+          "parameters": {
+            "density": 1500.0,
+            "friction": 0.0,
+            "viscosity": 100.0,
+            "yield_stress": 300.0,
+            "yield_pressure": 10000000000.0,
+            "tensile_yield_ratio": 1.0
+          }
+        }
+      ]
+    }
+  }
+}

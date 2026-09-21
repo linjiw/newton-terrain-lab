@@ -1,0 +1,380 @@
+{
+  "validated_unix": 1789894544.4349084,
+  "completed_artifacts_passed": true,
+  "comparison_complete": true,
+  "incomplete_training_phases": [],
+  "sources": {
+    "pilot": {
+      "source_files": 101,
+      "unchanged": true,
+      "run_status": "completed"
+    },
+    "pilot-2cm": {
+      "source_files": 106,
+      "unchanged": true,
+      "run_status": "completed"
+    },
+    "training-smoke": {
+      "source_files": 103,
+      "unchanged": true,
+      "run_status": "completed"
+    },
+    "training/scheduled": {
+      "source_files": 106,
+      "unchanged": true,
+      "run_status": "completed"
+    },
+    "training/target": {
+      "source_files": 106,
+      "unchanged": true,
+      "run_status": "completed"
+    }
+  },
+  "datasets": {
+    "train_count": 84,
+    "reserved_count": 20,
+    "disjoint": true,
+    "hashes_unchanged": true,
+    "reserved_used": false
+  },
+  "evaluations": [
+    {
+      "path": "STUDY/pilot/depth-0.04-indoor_00509",
+      "depth_m": 0.04,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/pilot/depth-0.04-indoor_00674",
+      "depth_m": 0.04,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/pilot/depth-0.04-indoor_00792",
+      "depth_m": 0.04,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/pilot/depth-0.14-indoor_00509",
+      "depth_m": 0.14,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/pilot/depth-0.14-indoor_00674",
+      "depth_m": 0.14,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/pilot/depth-0.14-indoor_00792",
+      "depth_m": 0.14,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/pilot-2cm/depth-0.02-indoor_00509",
+      "depth_m": 0.02,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/pilot-2cm/depth-0.02-indoor_00674",
+      "depth_m": 0.02,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/pilot-2cm/depth-0.02-indoor_00792",
+      "depth_m": 0.02,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/training/scheduled/eval-indoor_00509",
+      "depth_m": 0.14,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/training/scheduled/eval-indoor_00674",
+      "depth_m": 0.14,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/training/scheduled/eval-indoor_00792",
+      "depth_m": 0.14,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/training/target/eval-indoor_00509",
+      "depth_m": 0.14,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/training/target/eval-indoor_00674",
+      "depth_m": 0.14,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    },
+    {
+      "path": "STUDY/training/target/eval-indoor_00792",
+      "depth_m": 0.14,
+      "control_steps": 500,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "finite_arrays": true,
+      "material_parameters_verified": true,
+      "tile_floors_verified": 256
+    }
+  ],
+  "training_phases": [
+    {
+      "path": "STUDY/training-smoke/phase-0",
+      "rollouts": 2,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.04,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training-smoke/phase-1",
+      "rollouts": 2,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.08,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training-smoke/phase-2",
+      "rollouts": 2,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.14,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training-smoke/phase-3",
+      "rollouts": 2,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.14,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training/scheduled/phase-0",
+      "rollouts": 64,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.02,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training/scheduled/phase-1",
+      "rollouts": 64,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.06,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training/scheduled/phase-2",
+      "rollouts": 64,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.14,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training/scheduled/phase-3",
+      "rollouts": 64,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.14,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training/target/phase-0",
+      "rollouts": 64,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.14,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training/target/phase-1",
+      "rollouts": 64,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.14,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training/target/phase-2",
+      "rollouts": 64,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.14,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    },
+    {
+      "path": "STUDY/training/target/phase-3",
+      "rollouts": 64,
+      "native_exit": 0,
+      "worker_exit": 0,
+      "fresh_optimizer": true,
+      "teacher_unchanged": true,
+      "depth_m": 0.14,
+      "tile_floors_verified": 256,
+      "material_parameters_verified": true
+    }
+  ],
+  "checkpoints": "CHECKPOINT_INTEGRITY.json",
+  "extraction_cases": 12,
+  "extraction_cycles": 24,
+  "unit_tests_passed": 62,
+  "interrupted_phase_recovery": {
+    "started_unix": 1789889076.6624267,
+    "observed_launcher_exit_code": 143,
+    "cause": "SIGTERM; sender/cause unknown. No logged optimizer guard failure or training exception.",
+    "discarded_control_steps": 1362,
+    "discarded_transitions": 5448,
+    "discarded_optimizer_steps": 224,
+    "discarded_complete_rollouts": 56,
+    "recovery": "Restart entire phase 1 from completed phase 0, same phase seed and settings, fresh optimizer as originally specified.",
+    "retained_budget_rollouts": 256,
+    "extra_compute_disclosed": true,
+    "source": "STUDY/recover_scheduled.py",
+    "source_sha256": "db343c1112a50ecafb23c43028797b46fb639714c09e2de25aaa7b71b1b9b4fc"
+  },
+  "serialized_recovery": {
+    "started_unix": 1789891894.2201893,
+    "observed_launcher_exit_code": 143,
+    "scheduling": "Serialized after target control completion; other jobs observed finished. Termination cause remains unknown.",
+    "previous_recovery_receipt": "STUDY/training/scheduled/recovery.json",
+    "previous_discarded_transitions": 5448,
+    "total_discarded_transitions": 8916,
+    "cause": "SIGTERM; sender/cause unknown. No logged optimizer guard failure or training exception.",
+    "discarded_control_steps": 867,
+    "discarded_transitions": 3468,
+    "discarded_optimizer_steps": 144,
+    "discarded_complete_rollouts": 36,
+    "recovery": "Restart entire phase 1 from completed phase 0, same phase seed and settings, fresh optimizer as originally specified.",
+    "retained_budget_rollouts": 256,
+    "extra_compute_disclosed": true,
+    "source": "STUDY/recover_scheduled_serial.py",
+    "source_sha256": "50bf40c9388091692a8b9158672a905f0900a077865509bf26a59744fc292a24"
+  },
+  "performance_gates": {
+    "scheduled": {
+      "beats_start_20pct": false,
+      "no_ground_failures": true,
+      "soil_tracking_retained": false,
+      "soil_contact_25pct": true,
+      "soil_contact_qualified_completions": false
+    },
+    "target": {
+      "beats_start_20pct": false,
+      "no_ground_failures": true,
+      "soil_tracking_retained": false,
+      "soil_contact_25pct": true,
+      "soil_contact_qualified_completions": false
+    }
+  },
+  "candidate_passed": false,
+  "meaning": "Execution and provenance checks for completed artifacts only. Interrupted training is excluded and listed explicitly. Not material calibration or a guarantee of controller reliability."
+}
